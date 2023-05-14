@@ -1,34 +1,115 @@
 import React from "react";
 
-import { Badge, Box, Card, Flex, Group, Image, Text } from "@mantine/core";
+import {
+  Badge,
+  Box,
+  Card,
+  Flex,
+  Group,
+  Image,
+  List,
+  Tabs,
+  Text,
+} from "@mantine/core";
 import { FC } from "react";
 import { ProjectCardProps } from "./data";
 import useColorScheme from "@/hooks/useColorScheme";
+import { MdWorkOutline } from "react-icons/md";
 
-const ProjectCard: FC<ProjectCardProps> = ({ id }) => {
+const ProjectCard: FC<ProjectCardProps> = ({
+  id,
+  image,
+  description,
+  tools,
+  languages,
+  technologies,
+  name,
+  links,
+}) => {
   const [colorScheme, setColorScheme] = useColorScheme();
   return (
     <Card padding="lg" radius="md" withBorder={colorScheme === "light"}>
-      <Card.Section>
-        <Image
-          src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-          height={160}
-          width={320}
-          alt="Norway"
-        />
-      </Card.Section>
+      <Card.Section>{image}</Card.Section>
 
-      <Group position="apart" mt="md" mb="xs">
-        <Text weight={500}>Norway Fjord Adventures</Text>
-        <Badge color="pink" variant="light">
-          On Sale
-        </Badge>
-      </Group>
+      <Tabs defaultValue="detail">
+        <Tabs.List>
+          <Tabs.Tab value="detail" icon={<MdWorkOutline size="0.8rem" />}>
+            Detail
+          </Tabs.Tab>
+          <Tabs.Tab value="tools" icon={<MdWorkOutline size="0.8rem" />}>
+            Tools
+          </Tabs.Tab>
+          {links != null && (
+            <Tabs.Tab value="links" icon={<MdWorkOutline size="0.8rem" />}>
+              More
+            </Tabs.Tab>
+          )}
+        </Tabs.List>
 
-      <Text size="sm" color="dimmed">
-        With Fjord Tours you can explore more of the magical fjord landscapes
-        with tours and activities on and around the fjords of Norway
-      </Text>
+        <Tabs.Panel value="detail" pt="xs">
+          <Box key={name}>
+            <Group position="apart" mt="md" mb="xs">
+              <Text weight={500}>{name}</Text>
+
+              <Box>
+                {tools.map((technology, i) => {
+                  return (
+                    <Badge
+                      key={technology.name}
+                      color={technology.type === "language" ? "blue" : "green"}
+                      variant="light"
+                    >
+                      {technology.name}
+                    </Badge>
+                  );
+                })}
+              </Box>
+            </Group>
+            <Text size="sm" color="dimmed">
+              {description}
+            </Text>
+          </Box>
+        </Tabs.Panel>
+
+        <Tabs.Panel value="tools" pt="xs">
+          <Flex gap={10} direction="row">
+            <Box style={{ flexGrow: 1 }}>
+              <Flex direction="column" gap={5}>
+                <Text>Technologies Used:</Text>
+                <List>
+                  {technologies.map((technology) => {
+                    return (
+                      <List.Item key={technology.name} icon={technology.icon}>
+                        {technology.name}
+                      </List.Item>
+                    );
+                  })}
+                </List>
+              </Flex>
+            </Box>
+            <Box style={{ flexGrow: 1 }}>
+              <Flex direction="column" gap={5}>
+                <Text>Languages Used:</Text>
+                <List>
+                  {languages.map((language) => {
+                    return (
+                      <List.Item key={language.name} icon={language.icon}>
+                        {language.name}
+                      </List.Item>
+                    );
+                  })}
+                </List>
+              </Flex>
+            </Box>
+          </Flex>
+        </Tabs.Panel>
+
+        {links != null && (
+          <Tabs.Panel value="links" pt="xs">
+            {links}
+          </Tabs.Panel>
+        )}
+      </Tabs>
     </Card>
   );
 };

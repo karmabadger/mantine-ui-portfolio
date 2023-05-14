@@ -1,9 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { Box, Flex, Text } from "@mantine/core";
 
 import ProjectCard from "./ProjectCard";
 import { data } from "./data";
+
+import { ProjectCardProps } from "./data";
 
 const ProjectCards = () => {
   return (
@@ -13,10 +15,13 @@ const ProjectCards = () => {
           <Box id={project.id} key={project.id}>
             <ProjectCard
               id={project.id}
-              title={project.title}
+              name={project.name}
+              image={project.image}
               description={project.description}
+              tools={project.tools}
               technologies={project.technologies}
               languages={project.languages}
+              links={project.links}
             />
           </Box>
         );
