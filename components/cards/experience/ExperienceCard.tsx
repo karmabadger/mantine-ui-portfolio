@@ -42,10 +42,10 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
         <Image src={imageData.src} height={220} alt={imageData.alt} />
       </Card.Section>
 
-      <Tabs defaultValue="company">
+      <Tabs defaultValue="detail">
         <Tabs.List>
-          <Tabs.Tab value="company" icon={<MdWorkOutline size="0.8rem" />}>
-            Company
+          <Tabs.Tab value="detail" icon={<MdWorkOutline size="0.8rem" />}>
+            Detail
           </Tabs.Tab>
           <Tabs.Tab value="projects" icon={<FaProjectDiagram size="0.8rem" />}>
             Projects
@@ -55,7 +55,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
           </Tabs.Tab>
         </Tabs.List>
 
-        <Tabs.Panel value="company" pt="xs">
+        <Tabs.Panel value="detail" pt="xs">
           <Flex direction="row" justify="flex-start" align="center" gap={10}>
             {companyData.icon ? (
               companyData.icon

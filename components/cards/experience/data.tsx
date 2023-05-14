@@ -4,13 +4,19 @@ import Image from "next/image";
 import React from "react";
 import { BsFillPencilFill } from "react-icons/bs";
 import {
+  SiChakraui,
   SiCss3,
   SiElectron,
+  SiFastify,
+  SiGraphql,
   SiJavascript,
+  SiMongodb,
+  SiNextdotjs,
   SiNodedotjs,
   SiPandas,
   SiPlotly,
   SiPython,
+  SiReact,
   SiRust,
   SiSolidity,
   SiTypescript,
@@ -19,6 +25,7 @@ import {
 import TokioIcon from "@/components/icons/TokioIcon";
 
 import { RiRemoteControlLine } from "react-icons/ri";
+import { BiHardHat } from "react-icons/bi";
 
 type ExperienceCardProps = {
   id: string;
@@ -319,6 +326,208 @@ const data: ExperienceCardProps[] = [
               alt="Foundry"
             />
           ),
+        },
+      ],
+      languages: [
+        {
+          name: "Solidity",
+          icon: <SiSolidity />,
+        },
+        {
+          name: "Typescript",
+          icon: <SiTypescript color="#3178c6" />,
+        },
+        {
+          name: "Javascript",
+          icon: <SiJavascript color="#F0DB4F" />,
+        },
+      ],
+    },
+  },
+  {
+    id: "freelance",
+    imageData: {
+      src: "/freelance_banner.jpg",
+      alt: "Freelance",
+    },
+    jobData: {
+      companyName: "Freelance",
+      title:
+        "Freelance Software Engineer (Full Stack, Smart Contracts and Consulting)",
+      time: "2020-2023",
+    },
+    projectsData: [
+      {
+        name: "Various Freelance Projects",
+        description:
+          "Worked on various private Freelance software engineering projects and consulted on various projects.",
+        technologies: [
+          {
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "Rust",
+            type: "language",
+          },
+          {
+            name: "Python",
+            type: "language",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "React.js",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "Sharp.js",
+            type: "technology",
+          },
+          {
+            name: "Jimp.js",
+            type: "technology",
+          },
+          {
+            name: "Chakra UI",
+            type: "technology",
+          },
+          {
+            name: "Actix Web",
+            type: "technology",
+          },
+          {
+            name: "fastify.js",
+            type: "technology",
+          },
+          {
+            name: "Sharp.js",
+            type: "technology",
+          },
+          {
+            name: "Jimp.js",
+            type: "technology",
+          },
+          {
+            name: "Solidity",
+            type: "language",
+          },
+          {
+            name: "ethers.js",
+            type: "technology",
+          },
+          {
+            name: "hardhat",
+            type: "technology",
+          },
+          {
+            name: "foundry",
+            type: "technology",
+          },
+          {
+            name: "MongoDB",
+            type: "technology",
+          },
+          {
+            name: "REST API",
+            type: "technology",
+          },
+          {
+            name: "websockets",
+            type: "technology",
+          },
+          {
+            name: "GraphQL",
+            type: "technology",
+          },
+        ],
+      },
+    ],
+    technologiesData: {
+      technologies: [
+        {
+          name: "Node.js",
+          icon: <SiNodedotjs color="#68A063" />,
+        },
+        {
+          name: "Next.js",
+          icon: <SiNextdotjs color="#000000" />,
+        },
+        {
+          name: "React.js",
+          icon: <SiReact color="#61DAFB" />,
+        },
+        {
+          name: "Sharp.js",
+          icon: <SharpjsIcon />,
+        },
+        {
+          name: "Jimp.js",
+          icon: <BsFillPencilFill />,
+        },
+        {
+          name: "Foundry",
+          icon: (
+            <Image
+              src="/foundry_icon.png"
+              height={17}
+              width={17}
+              alt="Foundry"
+            />
+          ),
+        },
+        {
+          name: "Ethers.js",
+          icon: (
+            <Image
+              src="/ethers_icon.png"
+              height={17}
+              width={17}
+              alt="Ethers.js Icon"
+            />
+          ),
+        },
+        {
+          name: "Hardhat",
+          icon: <BiHardHat />,
+        },
+        {
+          name: "MongoDB",
+          icon: <SiMongodb />,
+        },
+        {
+          name: "GraphQL",
+          icon: <SiGraphql />,
+        },
+        {
+          name: "Chakra UI",
+          icon: <SiChakraui />,
+        },
+        {
+          name: "Actix Web",
+          icon: <SiRust />,
+        },
+        {
+          name: "Fastify",
+          icon: <SiFastify />,
+        },
+        {
+          name: "Websockets",
+          icon: <SiRust />,
+        },
+        {
+          name: "REST API",
+          icon: <SiRust />,
         },
       ],
       languages: [
