@@ -106,10 +106,6 @@ const data: ExperienceCardProps[] = [
             type: "technology",
           },
           {
-            name: "remote-procedure-call",
-            type: "technology",
-          },
-          {
             name: "TCP",
             type: "technology",
           },
@@ -194,10 +190,6 @@ const data: ExperienceCardProps[] = [
             />
           ),
         },
-        {
-          name: "Remote Procedure Call",
-          icon: <RiRemoteControlLine />,
-        },
       ],
       languages: [
         {
@@ -205,11 +197,11 @@ const data: ExperienceCardProps[] = [
           icon: <SiRust />,
         },
         {
-          name: "Typescript",
+          name: "TypeScript",
           icon: <SiTypescript color="#3178c6" />,
         },
         {
-          name: "Javascript",
+          name: "JavaScript",
           icon: <SiJavascript color="#F0DB4F" />,
         },
         {
