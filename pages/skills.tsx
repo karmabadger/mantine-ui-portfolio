@@ -14,7 +14,7 @@ export default function skills() {
           <Box styles={{ dipslay: "inline-block" }}>
             <Text
               variant="gradient"
-              gradient={{ from: "blue", to: "pink" }}
+              gradient={{ from: "blue", to: "pink" }}  
               size="3rem"
               weight={700}
               styles={{ dipslay: "inline" }}
