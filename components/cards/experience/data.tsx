@@ -755,21 +755,21 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "Rust",
-          icon: <SiRust size="1.5rem" />,
+          icon: <SiRust />,
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript size="1.5rem" />,
+          icon: <SiTypescript />,
         },
         {
           name: "Node.js",
-          icon: <SiNodedotjs size="1.5rem" />,
+          icon: <SiNodedotjs />,
         },
       ],
       languages: [
         {
           name: "Rust",
-          icon: <SiRust size="1.5rem" />,
+          icon: <SiRust />,
         },
       ],
     },
