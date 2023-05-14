@@ -35,7 +35,7 @@ const data: EducationDataProps[] = [
       image: (
         <Image
           src="/mcgill_banner_2x.jpg"
-          height={400}
+          height={600}
           alt="Mcgill Banner"
           //   fit="contain"
           radius=""
@@ -188,9 +188,9 @@ const data: EducationDataProps[] = [
       link: "https://www.johnabbott.qc.ca/",
       image: (
         <Image
-          src="/johnabbott_banner.webp"
+          src="/johnabbott_banner.jpg"
           alt="John Abbott College Banner"
-          height={400}
+          height={600}
         />
       ),
     },
