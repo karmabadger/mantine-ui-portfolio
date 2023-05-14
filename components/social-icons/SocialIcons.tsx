@@ -18,6 +18,8 @@ const SocialIcons = () => {
         <SocialIcon
           id="github"
           url="https://github.com/karmabadger"
+          bgColor="black"
+          fgColor="white"
           style={{ height: 35, width: 35, margin }}
         />
         <SocialIcon
