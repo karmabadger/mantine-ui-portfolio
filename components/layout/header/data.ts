@@ -11,6 +11,11 @@ const links: NavbarLink[] = [
     name: "home",
   },
   {
+    href: "/experience",
+    label: "Experience",
+    name: "experience",
+  },
+  {
     href: "/projects",
     label: "Projects",
     name: "projects",
@@ -19,11 +24,6 @@ const links: NavbarLink[] = [
     href: "/skills",
     label: "Skills",
     name: "skills",
-  },
-  {
-    href: "/experience",
-    label: "Experience",
-    name: "experience",
   },
   {
     href: "/education",
