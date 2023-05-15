@@ -51,17 +51,13 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
             Projects
           </Tabs.Tab>
           <Tabs.Tab value="technologies" icon={<BsTools size="0.8rem" />}>
-            Technologies
+            Tech
           </Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="detail" pt="xs">
           <Flex direction="row" justify="flex-start" align="center" gap={10}>
-            {companyData.icon ? (
-              companyData.icon
-            ) : (
-              <MdWorkOutline size="1.5rem" />
-            )}
+            {companyData.icon ? companyData.icon : <MdWorkOutline size="50" />}
             <Box
               style={{
                 flexGrow: 1,
@@ -135,7 +131,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
                   {technologiesData.technologies.map((technology) => {
                     return (
                       <List.Item key={technology.name} icon={technology.icon}>
-                        {technology.name}
+                        <Box>{technology.name}</Box>
                       </List.Item>
                     );
                   })}

@@ -7,10 +7,12 @@ import {
   SiChakraui,
   SiCss3,
   SiElectron,
+  SiEthereum,
   SiFastify,
   SiGraphql,
   SiJavascript,
   SiMongodb,
+  SiMui,
   SiNextdotjs,
   SiNodedotjs,
   SiPandas,
@@ -22,10 +24,14 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+import { AiTwotoneSetting } from "react-icons/ai";
+
 import TokioIcon from "@/components/icons/TokioIcon";
 
 import { RiRemoteControlLine } from "react-icons/ri";
 import { BiHardHat } from "react-icons/bi";
+import WebsocketsIcon from "@/components/icons/WebsocketsIcon";
+import { TbBrandMantine } from "react-icons/tb";
 
 type ExperienceCardProps = {
   id: string;
@@ -61,6 +67,8 @@ type ExperienceCardProps = {
   };
 };
 
+const techIconSize = 16;
+
 const data: ExperienceCardProps[] = [
   // experience at Cyberbrokers
   {
@@ -86,7 +94,7 @@ const data: ExperienceCardProps[] = [
     projectsData: [
       {
         name: "Custom Discord Command RPC Bot Server",
-        description: "Creating a custom RPC server for Discord bots",
+        description: `Designed and Developed a custom Discord bot for the purpose of sending Remote Procedure Calls (RPC) to a custom server. This project is composed of 2 parts, a Node.js "frontend" using Discord.js that handles user command events and a Rust "backend" which has a stable First In First Out Queue which can be multi-threaded. The two parts communicate using GRPC protocol buffers. The server then has to executes the command and sends the result back to the bot, which then sends the result to the user. Entirely custom designed and built from scratch and the servers needed to be asynchronus to handle multiple requests at once, optimized and robust so not never fail while the entire codebase had to be clean, readable and maintainable long term.`,
         technologies: [
           {
             name: "Rust",
@@ -94,6 +102,10 @@ const data: ExperienceCardProps[] = [
           },
           {
             name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
             type: "language",
           },
           {
@@ -113,10 +125,6 @@ const data: ExperienceCardProps[] = [
             type: "technology",
           },
           {
-            name: "TCP",
-            type: "technology",
-          },
-          {
             name: "websockets",
             type: "technology",
           },
@@ -125,7 +133,7 @@ const data: ExperienceCardProps[] = [
       {
         name: "Custom Discord Invoke AI Stable Diffusion Bot",
         description:
-          "Creating a custom Discord bot with a queueing system for an Invoke AI server",
+          "Refactored and cleaned up outdated JS codebase for Discord bot for an Invoke AI Stable Diffusion server. The codebase was using outdated packages and had a lot of commands and functionalities but everything was contained in a single JS file with messy code and global variables for which things like the queue system was handled with. The codebase was refactored to use modern TS with static type checking, using a modular design pattern with each command in its own file and using a command handler to handle all commands. The codebase was also refactored to use modern Discord.js v13 and the bot was also updated to use the latest version of Node.js.",
         technologies: [
           {
             name: "TS",
@@ -165,8 +173,8 @@ const data: ExperienceCardProps[] = [
           icon: (
             <Image
               src="/grpc_icon.ico"
-              width={16}
-              height={16}
+              width={techIconSize}
+              height={techIconSize}
               alt="GRPC Icon"
             />
           ),
@@ -176,23 +184,23 @@ const data: ExperienceCardProps[] = [
           icon: (
             <Image
               src="/discordjs_icon.png"
-              width={16}
-              height={16}
+              width={techIconSize}
+              height={techIconSize}
               alt="Discord.js Icon"
             />
           ),
         },
         {
           name: "Tokio",
-          icon: <TokioIcon size={16} />,
+          icon: <TokioIcon size={techIconSize} />,
         },
         {
           name: "Invoke-AI",
           icon: (
             <Image
               src="/invokeai_icon.png"
-              width={16}
-              height={16}
+              width={techIconSize}
+              height={techIconSize}
               alt="Invoke-AI Icon"
             />
           ),
@@ -353,7 +361,7 @@ const data: ExperienceCardProps[] = [
     jobData: {
       companyName: "Freelance",
       title:
-        "Freelance Software Engineer (Full Stack, Smart Contracts and Consulting)",
+        "Freelance Software Engineer and Consultant (Full Stack, Smart Contracts)",
       time: "2020-2023",
     },
     projectsData: [
@@ -372,6 +380,10 @@ const data: ExperienceCardProps[] = [
           },
           {
             name: "Rust",
+            type: "language",
+          },
+          {
+            name: "Solidity",
             type: "language",
           },
           {
@@ -403,6 +415,10 @@ const data: ExperienceCardProps[] = [
             type: "technology",
           },
           {
+            name: "Mantine UI",
+            type: "technology",
+          },
+          {
             name: "Actix Web",
             type: "technology",
           },
@@ -417,10 +433,6 @@ const data: ExperienceCardProps[] = [
           {
             name: "Jimp.js",
             type: "technology",
-          },
-          {
-            name: "Solidity",
-            type: "language",
           },
           {
             name: "ethers.js",
@@ -499,35 +511,43 @@ const data: ExperienceCardProps[] = [
         },
         {
           name: "Hardhat",
-          icon: <BiHardHat />,
+          icon: <BiHardHat color="yellow" />,
         },
         {
           name: "MongoDB",
-          icon: <SiMongodb />,
+          icon: <SiMongodb color="#4DB33D" />,
         },
         {
           name: "GraphQL",
-          icon: <SiGraphql />,
+          icon: <SiGraphql color="#E10098" />,
         },
         {
           name: "Chakra UI",
-          icon: <SiChakraui />,
+          icon: <SiChakraui color="#319795" />,
+        },
+        {
+          name: "Mantine UI",
+          icon: <TbBrandMantine color="#339af0" />,
+        },
+        {
+          name: "Material UI",
+          icon: <SiMui color="#0081CB" />,
         },
         {
           name: "Actix Web",
-          icon: <SiRust />,
+          icon: <SiRust color="#000000" />,
         },
         {
           name: "Fastify",
-          icon: <SiFastify />,
+          icon: <SiFastify color="#000000" />,
         },
         {
           name: "Websockets",
-          icon: <SiRust />,
+          icon: <WebsocketsIcon />,
         },
         {
           name: "REST API",
-          icon: <SiRust />,
+          icon: <AiTwotoneSetting />,
         },
       ],
       languages: [
@@ -536,11 +556,19 @@ const data: ExperienceCardProps[] = [
           icon: <SiSolidity />,
         },
         {
-          name: "Typescript",
+          name: "TypeScript",
           icon: <SiTypescript color="#3178c6" />,
         },
         {
-          name: "Javascript",
+          name: "Rust",
+          icon: <SiRust />,
+        },
+        {
+          name: "Python",
+          icon: <SiPython />,
+        },
+        {
+          name: "JavaScript",
           icon: <SiJavascript color="#F0DB4F" />,
         },
       ],
@@ -754,22 +782,206 @@ const data: ExperienceCardProps[] = [
     technologiesData: {
       technologies: [
         {
-          name: "Rust",
-          icon: <SiRust />,
+          name: "React.js",
+          icon: <SiReact color="#61DAFB" />,
         },
         {
-          name: "TypeScript",
-          icon: <SiTypescript />,
+          name: "Next.js",
+          icon: <SiNextdotjs color="#000000" />,
         },
         {
           name: "Node.js",
-          icon: <SiNodedotjs />,
+          icon: <SiNodedotjs color="#339933" />,
+        },
+        {
+          name: "MongoDB",
+          icon: <SiMongodb color="#47A248" />,
+        },
+        {
+          name: "Chakra UI",
+          icon: <SiChakraui color="#319795" />,
+        },
+        {
+          name: "Material UI",
+          icon: <SiMui color="#0081CB" />,
+        },
+        {
+          name: "Foundry",
+          icon: (
+            <Image
+              src="/foundry_icon.png"
+              height={17}
+              width={17}
+              alt="Foundry"
+            />
+          ),
+        },
+        {
+          name: "Hardhat",
+          icon: <BiHardHat color="#F6851B" />,
+        },
+        {
+          name: "Ethers.js",
+          icon: (
+            <Image
+              src="/ethers_icon.png"
+              height={17}
+              width={17}
+              alt="Ethers.js Icon"
+            />
+          ),
         },
       ],
       languages: [
         {
           name: "Rust",
           icon: <SiRust />,
+        },
+        {
+          name: "TypeScript",
+          icon: <SiTypescript color="#3178c6" />,
+        },
+        {
+          name: "JavaScript",
+          icon: <SiJavascript color="#f7df1e" />,
+        },
+        {
+          name: "Solidity",
+          icon: <SiSolidity color="#363636" />,
+        },
+      ],
+    },
+  },
+  {
+    id: "csus-industry-mentorship",
+    imageData: {
+      src: "/CSUSmentorship_banner.png",
+      alt: "CSUS Mentorship Banner",
+    },
+    jobData: {
+      companyName: "CSUS",
+      title: "Mentor, Lecuturer and Workshop Host",
+      link: "https://www.csus.edu/",
+      time: "2020",
+      icon: (
+        <Image src="/CSUS_icon.png" alt="CSUS Icon" width={50} height={50} />
+      ),
+    },
+    projectsData: [
+      {
+        name: "Mentorship",
+        description:
+          "Mentored 2 groups of 4 students in the Industry Mentorship Program. Helped students with their projects and provided guidance on how to approach problems. Had regular meetings with students to check up on their progress and provide feedback.",
+        technologies: [
+          {
+            name: "Mentorship",
+            type: "technology",
+          },
+        ],
+        link: "https://www.csus.edu/",
+      },
+      {
+        name: "Lectures and Workshops",
+        description:
+          "Organized and hosted 2 lectures on the following topics: Javascript, Typescript, React, Next.js, Node.js. Organized and hosted a workshop on the following topics: Blockchain Technologies, Smart Contracts, Solidity and Ethers.js.",
+        technologies: [
+          {
+            name: "TS",
+            type: "technology",
+          },
+          {
+            name: "JS",
+            type: "technology",
+          },
+          {
+            name: "React",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "Blockchain",
+            type: "technology",
+          },
+          {
+            name: "Smart Contracts",
+            type: "technology",
+          },
+          {
+            name: "Solidity",
+            type: "language",
+          },
+          {
+            name: "Ethers.js",
+            type: "technology",
+          },
+        ],
+        link: "https://www.csus.edu/",
+      },
+      {
+        name: "Workshop Host",
+        description: "",
+        technologies: [
+          {
+            name: "Workshop Host",
+            type: "technology",
+          },
+        ],
+        link: "https://mcgill-csus.ca/industry-mentorship-program",
+      },
+    ],
+    technologiesData: {
+      technologies: [
+        {
+          name: "React.js",
+          icon: <SiReact color="#61DAFB" />,
+        },
+        {
+          name: "Next.js",
+          icon: <SiNextdotjs color="#000000" />,
+        },
+        {
+          name: "Node.js",
+          icon: <SiNodedotjs color="#339933" />,
+        },
+        {
+          name: "Blockchain",
+          icon: <SiEthereum color="#121D33" />,
+        },
+        {
+          name: "Solidity",
+          icon: <SiSolidity color="#363636" />,
+        },
+        {
+          name: "Ethers.js",
+          icon: (
+            <Image
+              src="/ethers_icon.png"
+              height={17}
+              width={17}
+              alt="Ethers.js Icon"
+            />
+          ),
+        },
+      ],
+      languages: [
+        {
+          name: "TypeScript",
+          icon: <SiTypescript color="#3178c6" />,
+        },
+        {
+          name: "JavaScript",
+          icon: <SiJavascript color="#f7df1e" />,
+        },
+        {
+          name: "Solidity",
+          icon: <SiSolidity color="#363636" />,
         },
       ],
     },
@@ -797,8 +1009,9 @@ const data: ExperienceCardProps[] = [
     },
     projectsData: [
       {
-        name: "Data Science",
-        description: "",
+        name: "GUI Application for Data Cleaning, Analysis and Compilation",
+        description:
+          "Engineered and Developed a GUI application using Electron.js and Typescript to clean that interfaces with a Python, Pandas and numpy backend to analyze, compile and export data from multiple sources. Used Plotly.js and Plotly to visualize data through the GUI. The design of the GUI application was created using the Brand Design of the company in mind. The application ended up being used by the company globally.",
         technologies: [
           {
             name: "Typescript",
@@ -822,6 +1035,10 @@ const data: ExperienceCardProps[] = [
           },
           {
             name: "Pandas",
+            type: "technology",
+          },
+          {
+            name: "Numpy",
             type: "technology",
           },
           {
