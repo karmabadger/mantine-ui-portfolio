@@ -142,8 +142,7 @@ const data: ProjectCardProps[] = [
     ],
     links: (
       <>
-        <a href="https://github.com/karmabadger/looper-game">Github</a>
-        <a href="https://github.com/karmabadger/looper-win">Windows Download</a>
+        <a href="https://gitlab.com/wenxuan27/looper-game">Github</a>
       </>
     ),
   },
@@ -184,6 +183,44 @@ const data: ProjectCardProps[] = [
     links: (
       <>
         <a href="">Github</a>
+      </>
+    ),
+  },
+  {
+    id: "mcgame-jam-2020",
+    name: "McGame Jam 2020",
+    image: <Image src="mcgamejam2020_banner.png" alt="Norway" />,
+    description:
+      "A 2D Zombie Apocalypse survival game made in 48 hours for the McGame Jam 2020. The game is made using Unity3d with entirely custom assets.",
+    tools: [
+      {
+        name: "C#",
+        type: "language",
+      },
+      {
+        name: "Unity3d",
+        type: "technology",
+      },
+    ],
+    technologies: [
+      {
+        name: "Unity3d",
+        icon: <TaichiIcon />,
+      },
+    ],
+    languages: [
+      {
+        name: "C#",
+        icon: <DiJava />,
+      },
+    ],
+    links: (
+      <>
+        <Flex>
+          <Link href="https://gitlab.com/wenxuan27/mcgamejame2020">
+            Repository
+          </Link>
+        </Flex>
       </>
     ),
   },
@@ -240,12 +277,23 @@ const data: ProjectCardProps[] = [
     id: "covid-twitter-web-scraper-and-analyzer",
     name: "COVID Twitter Web Scraper and Analyzer",
     image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
+      <Flex direction="row">
+        <Image
+          src="/covid_analysis_1.png"
+          style={{
+            flex: 1,
+            height: "100%",
+          }}
+          alt="Norway"
+        />
+        <Image
+          src="/covid_analysis_2.png"
+          style={{
+            flex: 1,
+          }}
+          alt="Norway"
+        />
+      </Flex>
     ),
     description:
       "A web scraper for Twitter that scrapes tweets related to COVID-19 and analyzes them using sentiment analysis. The scraper is implemented in Python using the Selenium library.",
@@ -464,7 +512,7 @@ const data: ProjectCardProps[] = [
   },
   {
     id: "tictactoe-solidity-on-the-blockchain",
-    name: "TicTacToe using Solidity on the Blockchain",
+    name: "TicTacToe on the Blockchain",
     image: (
       <Image
         src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
@@ -638,6 +686,50 @@ const data: ProjectCardProps[] = [
           <Link href="https://github.com/karmabadger/marketplace-web-app-django">
             Repository
           </Link>
+        </Flex>
+      </>
+    ),
+  },
+  {
+    id: "dosbox-asm-delauney-triangulation",
+    name: "DOSBox ASM Delauney Triangulation",
+    image: <Image src="/delauney_banner.png" alt="Norway" />,
+    description:
+      "A Delauney Triangulation implementation in x86 Assembly for DOSBox.",
+    tools: [
+      {
+        name: "x86 Assembly",
+        type: "language",
+      },
+      {
+        name: "DOSBox",
+        type: "technology",
+      },
+      {
+        name: "TASM",
+        type: "technology",
+      },
+    ],
+    technologies: [
+      {
+        name: "DOSBox",
+        icon: <TaichiIcon />,
+      },
+      {
+        name: "TASM",
+        icon: <TaichiIcon />,
+      },
+    ],
+    languages: [
+      {
+        name: "Assembly",
+        icon: <SiSolidity />,
+      },
+    ],
+    links: (
+      <>
+        <Flex direction="column">
+          <Link href="">Repository</Link>
         </Flex>
       </>
     ),
