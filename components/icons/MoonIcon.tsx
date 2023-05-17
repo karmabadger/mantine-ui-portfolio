@@ -49,3 +49,5 @@ export const MoonIcon: FC<MoonIconProps> = ({
     </svg>
   );
 };
+
+export default MoonIcon;

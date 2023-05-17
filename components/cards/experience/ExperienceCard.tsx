@@ -10,6 +10,7 @@ import {
   List,
   Tabs,
   Text,
+  ThemeIcon,
 } from "@mantine/core";
 import { IconPhoto } from "@tabler/icons-react";
 import { IconMessageCircle } from "@tabler/icons-react";
@@ -93,7 +94,6 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
             {projectsData.map((project) => {
               return (
                 <Box key={project.name}>
-                  {" "}
                   <Group position="apart" mt="md" mb="xs">
                     <Text weight={500}>{project.name}</Text>
 
@@ -123,14 +123,21 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
         </Tabs.Panel>
 
         <Tabs.Panel value="technologies" pt="xs">
-          <Flex gap={10} direction="row">
+          <Flex gap={10} direction="row" mt={16}>
             <Box style={{ flexGrow: 1 }}>
-              <Flex direction="column" gap={5}>
+              <Flex direction="column" gap={10}>
                 <Text>Technologies Used:</Text>
                 <List>
                   {technologiesData.technologies.map((technology) => {
                     return (
-                      <List.Item key={technology.name} icon={technology.icon}>
+                      <List.Item
+                        key={technology.name}
+                        icon={
+                          <ThemeIcon color="none" size={25} radius="xl">
+                            {technology.icon}
+                          </ThemeIcon>
+                        }
+                      >
                         <Box>{technology.name}</Box>
                       </List.Item>
                     );
@@ -139,12 +146,19 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
               </Flex>
             </Box>
             <Box style={{ flexGrow: 1 }}>
-              <Flex direction="column" gap={5}>
+              <Flex direction="column" gap={10}>
                 <Text>Languages Used:</Text>
                 <List>
                   {technologiesData.languages.map((language) => {
                     return (
-                      <List.Item key={language.name} icon={language.icon}>
+                      <List.Item
+                        key={language.name}
+                        icon={
+                          <ThemeIcon color="none" size={25} radius="xl">
+                            {language.icon}
+                          </ThemeIcon>
+                        }
+                      >
                         {language.name}
                       </List.Item>
                     );

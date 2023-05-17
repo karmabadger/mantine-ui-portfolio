@@ -2,18 +2,13 @@ import React, { FC } from "react";
 import { SvgIconProps } from "@/types/icons/icon.types";
 
 const TaichiIcon: FC<SvgIconProps> = ({
-  color = "#FFF",
-  size = 15,
+  color = "black",
+  size = 28,
   stroke = 80,
 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    style={
-      {
-        //   enableBackground: "new 0 0 32 32",
-      }
-    }
     viewBox="0 0 32 32"
     width={size}
     height={size}

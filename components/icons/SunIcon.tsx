@@ -68,3 +68,5 @@ export const SunIcon: FC<SunIconProps> = ({
     </svg>
   );
 };
+
+export default SunIcon;

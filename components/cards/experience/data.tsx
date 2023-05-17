@@ -30,8 +30,10 @@ import TokioIcon from "@/components/icons/TokioIcon";
 
 import { RiRemoteControlLine } from "react-icons/ri";
 import { BiHardHat } from "react-icons/bi";
-import WebsocketsIcon from "@/components/icons/WebsocketsIcon";
+import WebsocketIcon from "@/components/icons/WebsocketIcon";
 import { TbBrandMantine } from "react-icons/tb";
+import { PythonIcon } from "@/components/icons";
+import { FaHardHat } from "react-icons/fa";
 
 type ExperienceCardProps = {
   id: string;
@@ -67,7 +69,7 @@ type ExperienceCardProps = {
   };
 };
 
-const techIconSize = 16;
+const techIconSize = 25;
 
 const data: ExperienceCardProps[] = [
   // experience at Cyberbrokers
@@ -166,7 +168,7 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "Node.js",
-          icon: <SiNodedotjs color="#68A063" />,
+          icon: <SiNodedotjs color="#68A063" size={techIconSize} />,
         },
         {
           name: "GRPC",
@@ -209,19 +211,19 @@ const data: ExperienceCardProps[] = [
       languages: [
         {
           name: "Rust",
-          icon: <SiRust />,
+          icon: <SiRust size={techIconSize} />,
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript color="#3178c6" />,
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
         },
         {
           name: "JavaScript",
-          icon: <SiJavascript color="#F0DB4F" />,
+          icon: <SiJavascript color="#F0DB4F" size={techIconSize} />,
         },
         {
           name: "Python",
-          icon: <SiPython />,
+          icon: <PythonIcon size={techIconSize} />,
         },
       ],
     },
@@ -314,23 +316,23 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "Node.js",
-          icon: <SiNodedotjs color="#68A063" />,
+          icon: <SiNodedotjs color="#68A063" size={techIconSize} />,
         },
         {
           name: "Sharp.js",
-          icon: <SharpjsIcon />,
+          icon: <SharpjsIcon size={techIconSize} />,
         },
         {
           name: "Jimp.js",
-          icon: <BsFillPencilFill />,
+          icon: <BsFillPencilFill size={techIconSize} color="red" />,
         },
         {
           name: "Foundry",
           icon: (
             <Image
               src="/foundry_icon.png"
-              height={17}
-              width={17}
+              height={techIconSize}
+              width={techIconSize}
               alt="Foundry"
             />
           ),
@@ -339,15 +341,15 @@ const data: ExperienceCardProps[] = [
       languages: [
         {
           name: "Solidity",
-          icon: <SiSolidity />,
+          icon: <SiSolidity size={techIconSize} />,
         },
         {
           name: "Typescript",
-          icon: <SiTypescript color="#3178c6" />,
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
         },
         {
           name: "Javascript",
-          icon: <SiJavascript color="#F0DB4F" />,
+          icon: <SiJavascript color="#F0DB4F" size={techIconSize} />,
         },
       ],
     },
@@ -469,31 +471,31 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "Node.js",
-          icon: <SiNodedotjs color="#68A063" />,
+          icon: <SiNodedotjs color="#68A063" size={techIconSize} />,
         },
         {
           name: "Next.js",
-          icon: <SiNextdotjs color="#000000" />,
+          icon: <SiNextdotjs size={techIconSize} />,
         },
         {
           name: "React.js",
-          icon: <SiReact color="#61DAFB" />,
+          icon: <SiReact color="#61DAFB" size={techIconSize} />,
         },
         {
           name: "Sharp.js",
-          icon: <SharpjsIcon />,
+          icon: <SharpjsIcon size={techIconSize} />,
         },
         {
           name: "Jimp.js",
-          icon: <BsFillPencilFill />,
+          icon: <BsFillPencilFill size={techIconSize} />,
         },
         {
           name: "Foundry",
           icon: (
             <Image
               src="/foundry_icon.png"
-              height={17}
-              width={17}
+              height={techIconSize}
+              width={techIconSize}
               alt="Foundry"
             />
           ),
@@ -503,73 +505,73 @@ const data: ExperienceCardProps[] = [
           icon: (
             <Image
               src="/ethers_icon.png"
-              height={17}
-              width={17}
+              height={techIconSize}
+              width={techIconSize}
               alt="Ethers.js Icon"
             />
           ),
         },
         {
           name: "Hardhat",
-          icon: <BiHardHat color="yellow" />,
+          icon: <FaHardHat color="yellow" size={techIconSize} />,
         },
         {
           name: "MongoDB",
-          icon: <SiMongodb color="#4DB33D" />,
+          icon: <SiMongodb color="#4DB33D" size={techIconSize} />,
         },
         {
           name: "GraphQL",
-          icon: <SiGraphql color="#E10098" />,
+          icon: <SiGraphql color="#E10098" size={techIconSize} />,
         },
         {
           name: "Chakra UI",
-          icon: <SiChakraui color="#319795" />,
+          icon: <SiChakraui color="#319795" size={techIconSize} />,
         },
         {
           name: "Mantine UI",
-          icon: <TbBrandMantine color="#339af0" />,
+          icon: <TbBrandMantine color="#339af0" size={techIconSize} />,
         },
         {
           name: "Material UI",
-          icon: <SiMui color="#0081CB" />,
+          icon: <SiMui color="#0081CB" size={techIconSize} />,
         },
         {
           name: "Actix Web",
-          icon: <SiRust color="#000000" />,
+          icon: <SiRust size={techIconSize} />,
         },
         {
           name: "Fastify",
-          icon: <SiFastify color="#000000" />,
+          icon: <SiFastify size={techIconSize} />,
         },
         {
           name: "Websockets",
-          icon: <WebsocketsIcon />,
+          icon: <WebsocketIcon size={techIconSize} color="#4B32C3" />,
         },
         {
           name: "REST API",
-          icon: <AiTwotoneSetting />,
+          icon: <AiTwotoneSetting size={techIconSize} />,
         },
       ],
       languages: [
         {
           name: "Solidity",
-          icon: <SiSolidity />,
+          icon: <SiSolidity size={techIconSize} />,
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript color="#3178c6" />,
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
         },
         {
           name: "Rust",
-          icon: <SiRust />,
+          icon: <SiRust size={techIconSize} />,
         },
         {
           name: "Python",
-          icon: <SiPython />,
+          icon: <PythonIcon size={techIconSize} />,
         },
         {
           name: "JavaScript",
-          icon: <SiJavascript color="#F0DB4F" />,
+          icon: <SiJavascript color="#F0DB4F" size={techIconSize} />,
         },
       ],
     },
@@ -783,50 +785,50 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "React.js",
-          icon: <SiReact color="#61DAFB" />,
+          icon: <SiReact color="#61DAFB" size={techIconSize} />,
         },
         {
           name: "Next.js",
-          icon: <SiNextdotjs color="#000000" />,
+          icon: <SiNextdotjs color="#000000" size={techIconSize} />,
         },
         {
           name: "Node.js",
-          icon: <SiNodedotjs color="#339933" />,
+          icon: <SiNodedotjs color="#339933" size={techIconSize} />,
         },
         {
           name: "MongoDB",
-          icon: <SiMongodb color="#47A248" />,
+          icon: <SiMongodb color="#47A248" size={techIconSize} />,
         },
         {
           name: "Chakra UI",
-          icon: <SiChakraui color="#319795" />,
+          icon: <SiChakraui color="#319795" size={techIconSize} />,
         },
         {
           name: "Material UI",
-          icon: <SiMui color="#0081CB" />,
+          icon: <SiMui color="#0081CB" size={techIconSize} />,
         },
         {
           name: "Foundry",
           icon: (
             <Image
               src="/foundry_icon.png"
-              height={17}
-              width={17}
+              height={techIconSize}
+              width={techIconSize}
               alt="Foundry"
             />
           ),
         },
         {
           name: "Hardhat",
-          icon: <BiHardHat color="#F6851B" />,
+          icon: <BiHardHat color="#F6851B" size={techIconSize} />,
         },
         {
           name: "Ethers.js",
           icon: (
             <Image
               src="/ethers_icon.png"
-              height={17}
-              width={17}
+              height={techIconSize}
+              width={techIconSize}
               alt="Ethers.js Icon"
             />
           ),
@@ -835,19 +837,19 @@ const data: ExperienceCardProps[] = [
       languages: [
         {
           name: "Rust",
-          icon: <SiRust />,
+          icon: <SiRust size={techIconSize} />,
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript color="#3178c6" />,
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
         },
         {
           name: "JavaScript",
-          icon: <SiJavascript color="#f7df1e" />,
+          icon: <SiJavascript color="#f7df1e" size={techIconSize} />,
         },
         {
           name: "Solidity",
-          icon: <SiSolidity color="#363636" />,
+          icon: <SiSolidity size={techIconSize} />,
         },
       ],
     },
@@ -874,7 +876,23 @@ const data: ExperienceCardProps[] = [
           "Mentored 2 groups of 4 students in the Industry Mentorship Program. Helped students with their projects and provided guidance on how to approach problems. Had regular meetings with students to check up on their progress and provide feedback.",
         technologies: [
           {
-            name: "Mentorship",
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "React",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "Node.js",
             type: "technology",
           },
         ],
@@ -887,11 +905,11 @@ const data: ExperienceCardProps[] = [
         technologies: [
           {
             name: "TS",
-            type: "technology",
+            type: "language",
           },
           {
             name: "JS",
-            type: "technology",
+            type: "language",
           },
           {
             name: "React",
@@ -924,47 +942,36 @@ const data: ExperienceCardProps[] = [
         ],
         link: "https://www.csus.edu/",
       },
-      {
-        name: "Workshop Host",
-        description: "",
-        technologies: [
-          {
-            name: "Workshop Host",
-            type: "technology",
-          },
-        ],
-        link: "https://mcgill-csus.ca/industry-mentorship-program",
-      },
     ],
     technologiesData: {
       technologies: [
         {
           name: "React.js",
-          icon: <SiReact color="#61DAFB" />,
+          icon: <SiReact color="#61DAFB" size={techIconSize} />,
         },
         {
           name: "Next.js",
-          icon: <SiNextdotjs color="#000000" />,
+          icon: <SiNextdotjs size={techIconSize} />,
         },
         {
           name: "Node.js",
-          icon: <SiNodedotjs color="#339933" />,
+          icon: <SiNodedotjs color="#339933" size={techIconSize} />,
         },
         {
           name: "Blockchain",
-          icon: <SiEthereum color="#121D33" />,
+          icon: <SiEthereum color="#121D33" size={techIconSize} />,
         },
         {
           name: "Solidity",
-          icon: <SiSolidity color="#363636" />,
+          icon: <SiSolidity size={techIconSize} />,
         },
         {
           name: "Ethers.js",
           icon: (
             <Image
               src="/ethers_icon.png"
-              height={17}
-              width={17}
+              height={techIconSize}
+              width={techIconSize}
               alt="Ethers.js Icon"
             />
           ),
@@ -973,15 +980,15 @@ const data: ExperienceCardProps[] = [
       languages: [
         {
           name: "TypeScript",
-          icon: <SiTypescript color="#3178c6" />,
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
         },
         {
           name: "JavaScript",
-          icon: <SiJavascript color="#f7df1e" />,
+          icon: <SiJavascript color="#f7df1e" size={techIconSize} />,
         },
         {
           name: "Solidity",
-          icon: <SiSolidity color="#363636" />,
+          icon: <SiSolidity size={techIconSize} />,
         },
       ],
     },
@@ -1052,37 +1059,37 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "Node.js",
-          icon: <SiNodedotjs color="#68A063" />,
+          icon: <SiNodedotjs color="#68A063" size={techIconSize} />,
         },
         {
           name: "Electron.js",
-          icon: <SiElectron color="#68A063" />,
+          icon: <SiElectron color="#68A063" size={techIconSize} />,
         },
         {
           name: "Pandas",
-          icon: <SiPandas color="#68A063" />,
+          icon: <SiPandas color="#68A063" size={techIconSize} />,
         },
         {
           name: "Plotly",
-          icon: <SiPlotly color="#68A063" />,
+          icon: <SiPlotly color="#68A063" size={techIconSize} />,
         },
       ],
       languages: [
         {
           name: "Typescript",
-          icon: <SiTypescript color="#3178c6" />,
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
         },
         {
           name: "Javascript",
-          icon: <SiJavascript color="#F0DB4F" />,
+          icon: <SiJavascript color="#F0DB4F" size={techIconSize} />,
         },
         {
           name: "Python",
-          icon: <SiPython color="#3178c6" />,
+          icon: <SiPython color="#3178c6" size={techIconSize} />,
         },
         {
           name: "CSS",
-          icon: <SiCss3 color="#3178c6" />,
+          icon: <SiCss3 color="#3178c6" size={techIconSize} />,
         },
       ],
     },

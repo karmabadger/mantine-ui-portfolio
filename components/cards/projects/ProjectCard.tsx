@@ -4,12 +4,14 @@ import {
   Badge,
   Box,
   Card,
+  Center,
   Flex,
   Group,
   Image,
   List,
   Tabs,
   Text,
+  ThemeIcon,
 } from "@mantine/core";
 import { FC } from "react";
 import { ProjectCardProps } from "./data";
@@ -72,15 +74,38 @@ const ProjectCard: FC<ProjectCardProps> = ({
         </Tabs.Panel>
 
         <Tabs.Panel value="tools" pt="xs">
-          <Flex gap={10} direction="row">
+          <Flex
+            mt={16}
+            style={{
+              marginTop: "16",
+            }}
+            gap={10}
+            direction="row"
+          >
             <Box style={{ flexGrow: 1 }}>
-              <Flex direction="column" gap={5}>
+              <Flex direction="column" gap={10}>
                 <Text>Technologies Used:</Text>
-                <List>
+                <List
+                  style={{
+                    alignItems: "center",
+                  }}
+                >
                   {technologies.map((technology) => {
                     return (
-                      <List.Item key={technology.name} icon={technology.icon}>
-                        {technology.name}
+                      <List.Item
+                        style={{
+                          alignItems: "center",
+                        }}
+                        key={technology.name}
+                        icon={
+                          <ThemeIcon color="none" size={25} radius="xl">
+                            {technology.icon}
+                          </ThemeIcon>
+                        }
+                      >
+                        <Center>
+                          <Text>{technology.name}</Text>
+                        </Center>
                       </List.Item>
                     );
                   })}
@@ -88,13 +113,22 @@ const ProjectCard: FC<ProjectCardProps> = ({
               </Flex>
             </Box>
             <Box style={{ flexGrow: 1 }}>
-              <Flex direction="column" gap={5}>
+              <Flex direction="column" gap={10}>
                 <Text>Languages Used:</Text>
                 <List>
                   {languages.map((language) => {
                     return (
-                      <List.Item key={language.name} icon={language.icon}>
-                        {language.name}
+                      <List.Item
+                        key={language.name}
+                        icon={
+                          <ThemeIcon color="none" size={25} radius="sm">
+                            {language.icon}
+                          </ThemeIcon>
+                        }
+                      >
+                        <Center>
+                          <Text>{language.name}</Text>
+                        </Center>
                       </List.Item>
                     );
                   })}
@@ -106,7 +140,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
         {links != null && (
           <Tabs.Panel value="links" pt="xs">
-            {links}
+            <Box mt={16}>{links}</Box>
           </Tabs.Panel>
         )}
       </Tabs>

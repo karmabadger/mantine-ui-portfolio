@@ -1,5 +1,5 @@
-import { SvgIconProps } from "@/types/icons/icon.types";
 import * as React from "react";
+import { SvgIconProps } from "@/types/icons/icon.types";
 
 const TokioIcon: React.FC<SvgIconProps> = ({
   color = "#FFF",

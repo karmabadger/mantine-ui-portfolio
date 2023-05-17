@@ -1,9 +1,11 @@
 import React from "react";
 import {
+  SiAssemblyscript,
   SiDjango,
   SiElectron,
   SiExpress,
   SiJavascript,
+  SiMongodb,
   SiMui,
   SiMysql,
   SiNodedotjs,
@@ -19,10 +21,31 @@ import {
 } from "react-icons/si";
 
 import TaichiIcon from "@/components/icons/TaichiIcon";
-import { Box, Card, Flex, Image } from "@mantine/core";
+import { Box, Card, Center, Flex, Image, ThemeIcon } from "@mantine/core";
 
 import { DiJava } from "react-icons/di";
 import Link from "next/link";
+
+import CSharpIcon from "@/components/icons/CSharpIcon";
+import PythonIcon from "@/components/icons/PythonIcon";
+import UnityIcon from "@/components/icons/UnityIcon";
+import CIcon from "@/components/icons/CIcon";
+import {
+  JavaIcon,
+  NumpyIcon,
+  PandasIcon,
+  ScikitLearnIcon,
+  TokioIcon,
+  WebsocketIcon,
+} from "@/components/icons";
+import {
+  AiOutlineReddit,
+  AiOutlineTwitter,
+  AiTwotoneSetting,
+} from "react-icons/ai";
+import { BsReddit } from "react-icons/bs";
+import { FaHardHat } from "react-icons/fa";
+import { TbBrandMysql } from "react-icons/tb";
 
 type ProjectCardProps = {
   id: string;
@@ -44,6 +67,7 @@ type ProjectCardProps = {
   links?: React.ReactNode;
 };
 
+const techIconSize = 25;
 const data: ProjectCardProps[] = [
   {
     id: "soft-body-simulation",
@@ -89,20 +113,20 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "Taichi",
-        icon: <TaichiIcon />,
+        icon: <TaichiIcon size={techIconSize} />,
       },
     ],
     languages: [
       {
         name: "Python",
-        icon: <SiPython />,
+        icon: <PythonIcon size={techIconSize} />,
       },
     ],
     links: (
       <>
-        <a href="https://github.com/karmabadger/2d-softbody-simulations">
+        <Link href="https://github.com/karmabadger/2d-softbody-simulations">
           Github
-        </a>
+        </Link>
       </>
     ),
   },
@@ -131,18 +155,72 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "Unity3d",
-        icon: <TaichiIcon />,
+        icon: <UnityIcon size={techIconSize} />,
       },
     ],
     languages: [
       {
         name: "C#",
-        icon: <DiJava />,
+        icon: (
+          <Center>
+            <CSharpIcon size={techIconSize} />
+          </Center>
+        ),
       },
     ],
     links: (
       <>
-        <a href="https://gitlab.com/wenxuan27/looper-game">Github</a>
+        <Flex direction="column" gap={10}>
+          <Link href="https://looper.bumpystudio.xyz/">
+            Try it out on your browser!
+          </Link>
+          <Link href="https://gitlab.com/wenxuan27/looper-game">
+            Repository
+          </Link>
+        </Flex>
+      </>
+    ),
+  },
+  {
+    id: "repo-d",
+    name: "Repo-Daemon (WIP)",
+    image: (
+      <Image
+        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+        height={160}
+        width={320}
+        alt="Norway"
+      />
+    ),
+    description:
+      "A simple command line daemon that listen for git events and webhook events and automatically updates, build and deploys code from a git repository on a remote server.",
+    tools: [
+      {
+        name: "Rust",
+        type: "language",
+      },
+      {
+        name: "Tokio",
+        type: "technology",
+      },
+    ],
+    technologies: [
+      {
+        name: "Tokio",
+        icon: <TokioIcon size={techIconSize} />,
+      },
+    ],
+    languages: [
+      {
+        name: "Rust",
+        icon: <SiRust size={techIconSize} />,
+      },
+    ],
+    links: (
+      <>
+        <Flex direction="column" gap={10}>
+          <Link href="">Repository</Link>
+        </Flex>
       </>
     ),
   },
@@ -173,18 +251,14 @@ const data: ProjectCardProps[] = [
     languages: [
       {
         name: "Java",
-        icon: <DiJava />,
+        icon: <JavaIcon size={techIconSize} />,
       },
       {
         name: "C",
-        icon: <SiPython />,
+        icon: <CIcon size={techIconSize} />,
       },
     ],
-    links: (
-      <>
-        <a href="">Github</a>
-      </>
-    ),
+    links: <>{/* <a href="">Github</a> */}</>,
   },
   {
     id: "mcgame-jam-2020",
@@ -205,13 +279,13 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "Unity3d",
-        icon: <TaichiIcon />,
+        icon: <UnityIcon size={techIconSize} />,
       },
     ],
     languages: [
       {
         name: "C#",
-        icon: <DiJava />,
+        icon: <CSharpIcon size={techIconSize} />,
       },
     ],
     links: (
@@ -250,26 +324,30 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "numpy",
-        icon: <TaichiIcon />,
+        icon: <NumpyIcon size={techIconSize} />,
       },
       {
         name: "pandas",
-        icon: <TaichiIcon />,
+        icon: <PandasIcon size={techIconSize} />,
       },
       {
         name: "scikit-learn",
-        icon: <TaichiIcon />,
+        icon: <ScikitLearnIcon size={techIconSize} />,
       },
     ],
     languages: [
       {
         name: "Python",
-        icon: <SiPython />,
+        icon: <PythonIcon size={techIconSize} />,
       },
     ],
     links: (
       <>
-        <a href="https://github.com/karmabadger/looper-game">Github</a>
+        <Flex>
+          <Link href="https://github.com/karmabadger/Pharmahacks2019">
+            Github
+          </Link>
+        </Flex>
       </>
     ),
   },
@@ -318,34 +396,34 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "pandas",
-        icon: <TaichiIcon />,
+        icon: <PandasIcon size={techIconSize} />,
       },
       {
         name: "tweepy",
-        icon: <TaichiIcon />,
+        icon: <AiOutlineTwitter color="#1DA1F2" size={techIconSize} />,
       },
       {
         name: "REST API",
-        icon: <TaichiIcon />,
+        icon: <AiTwotoneSetting color="pink" size={techIconSize} />,
       },
     ],
     languages: [
       {
         name: "Python",
-        icon: <SiPython />,
+        icon: <PythonIcon size={techIconSize} />,
       },
     ],
     links: (
       <>
-        <a href="https://github.com/karmabadger/covid-twitter-web-scraper-analysis">
+        <Link href="https://github.com/karmabadger/covid-twitter-web-scraper-analysis">
           Github
-        </a>
+        </Link>
       </>
     ),
   },
   {
-    id: "asb-web-scraper",
-    name: "ASB Web Scraper",
+    id: "reddit-web-scraper",
+    name: "Reddit Web Scraper",
     image: (
       <Image
         src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
@@ -377,21 +455,27 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "praw",
-        icon: <TaichiIcon />,
+        icon: (
+          <AiOutlineReddit
+            size={techIconSize}
+            color="#FF4300"
+            // style={{ backgroundColor: "white" }}
+          />
+        ),
       },
       {
         name: "REST API",
-        icon: <TaichiIcon />,
+        icon: <AiTwotoneSetting color="pink" size={techIconSize} />,
       },
       {
         name: "MongoDB",
-        icon: <TaichiIcon />,
+        icon: <SiMongodb size={techIconSize} color="#13AA52" />,
       },
     ],
     languages: [
       {
         name: "Python",
-        icon: <SiPython />,
+        icon: <PythonIcon size={techIconSize} />,
       },
     ],
     links: (
@@ -446,40 +530,40 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "electron.js",
-        icon: <SiElectron />,
+        icon: <SiElectron size={techIconSize} color="#9FEAF9" />,
       },
       {
         name: "Websockets",
-        icon: <TaichiIcon />,
+        icon: <WebsocketIcon size={techIconSize} color="#FF4300" />,
       },
       {
         name: "praw",
-        icon: <TaichiIcon />,
+        icon: <AiOutlineReddit size={techIconSize} color="#FF4300" />,
       },
       {
         name: "express.js",
-        icon: <SiExpress />,
+        icon: <SiExpress size={techIconSize} color="#3C873A" stroke="100" />,
       },
       {
         name: "snoowrap.js",
-        icon: <TaichiIcon />,
+        icon: <AiOutlineReddit size={techIconSize} color="#FF4300" />,
       },
     ],
     languages: [
       {
         name: "JavaScript",
-        icon: <SiJavascript />,
+        icon: <SiJavascript size={techIconSize} color="#F7DF1E" />,
       },
       {
         name: "Python",
-        icon: <SiPython />,
+        icon: <PythonIcon size={techIconSize} />,
       },
     ],
     links: (
       <>
-        <a href="https://github.com/karmabadger/ASB-reddit-gui-admin-app">
+        <Link href="https://github.com/karmabadger/ASB-reddit-gui-admin-app">
           Github
-        </a>
+        </Link>
       </>
     ),
   },
@@ -552,33 +636,40 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "Web3.js",
-        icon: <SiWebmoney />,
+        icon: (
+          <Image
+            src="/web3js_icon.png"
+            height={techIconSize}
+            width={techIconSize}
+            alt="Web3.js Icon"
+          />
+        ),
       },
       {
         name: "react.js",
-        icon: <SiReact />,
+        icon: <SiReact size={techIconSize} color="#61DAFB" />,
       },
       {
         name: "Node.js",
-        icon: <SiNodedotjs />,
+        icon: <SiNodedotjs size={techIconSize} color="#339933" />,
       },
       {
         name: "Material UI",
-        icon: <SiMui />,
+        icon: <SiMui size={techIconSize} color="#0081CB" />,
       },
       {
         name: "hardhat",
-        icon: <SiProtools />,
+        icon: <FaHardHat size={techIconSize} color="#F7DF1E" />,
       },
     ],
     languages: [
       {
         name: "Solidity",
-        icon: <SiSolidity />,
+        icon: <SiSolidity size={techIconSize} />,
       },
       {
         name: "JavaScript",
-        icon: <SiJavascript />,
+        icon: <SiJavascript size={techIconSize} color="#F7DF1E" />,
       },
     ],
     links: (
@@ -647,37 +738,37 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "Django",
-        icon: <SiDjango />,
+        icon: <SiDjango size={techIconSize} color="black" />,
       },
       {
         name: "Redis",
-        icon: <SiRedis />,
+        icon: <SiRedis size={techIconSize} color="#D82C20" />,
       },
       {
-        name: "channels",
-        icon: <SiDjango />,
+        name: "Websocket",
+        icon: <WebsocketIcon size={techIconSize} color="#FF4300" />,
       },
       {
         name: "selenium",
-        icon: <SiSelenium />,
+        icon: <SiSelenium size={techIconSize} color="#43B02A" />,
       },
       {
         name: "REST API",
-        icon: <SiPostman />,
+        icon: <AiTwotoneSetting color="pink" size={techIconSize} />,
       },
       {
         name: "MySQL",
-        icon: <SiMysql />,
+        icon: <TbBrandMysql size={techIconSize} color="#4479A1" />,
       },
     ],
     languages: [
       {
         name: "Python",
-        icon: <SiPython />,
+        icon: <PythonIcon size={techIconSize} />,
       },
       {
         name: "SQL",
-        icon: <SiMysql />,
+        icon: <TbBrandMysql size={techIconSize} color="#4479A1" />,
       },
     ],
     links: (
@@ -713,17 +804,29 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "DOSBox",
-        icon: <TaichiIcon />,
+        icon: (
+          <Image
+            src="/DOSBox_icon.png"
+            height={techIconSize}
+            alt="DOSBox Icon"
+          />
+        ),
       },
       {
         name: "TASM",
-        icon: <TaichiIcon />,
+        icon: (
+          <Image
+            src="/DOSBox_icon.png"
+            height={techIconSize}
+            alt="DOSBox Icon"
+          />
+        ),
       },
     ],
     languages: [
       {
         name: "Assembly",
-        icon: <SiSolidity />,
+        icon: <SiAssemblyscript size={techIconSize} color="#4479A1" />,
       },
     ],
     links: (
