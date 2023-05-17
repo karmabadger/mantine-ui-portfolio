@@ -48,19 +48,15 @@ const EducationCard: FC<EducationDataProps> = ({ id, degreeData, courses }) => {
 
         {courses != null && courses.length > 0 && (
           <Tabs.Panel value="courses" pt="xs">
-            <Flex
-              direction="column"
-              justify="flex-start"
-              align="flex-start"
-              fz="xl"
-              gap={5}
-            >
-              <Text weight={700}>Courses Taken</Text>
+            <Flex direction="column" justify="flex-start" align="flex-start">
+              <Box mt="md" mb="xs">
+                <Text>Courses Taken</Text>
+              </Box>
               <List>
                 {courses.map((course) => {
                   return (
                     <List.Item key={course.id} id={course.id}>
-                      <Text weight={500}>{course.title}</Text>
+                      <Text>{course.title}</Text>
                     </List.Item>
                   );
                 })}
