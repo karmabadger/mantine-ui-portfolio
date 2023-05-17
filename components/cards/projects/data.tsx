@@ -299,6 +299,61 @@ const data: ProjectCardProps[] = [
     ),
   },
   {
+    id: "smolsweep",
+    name: "Smolsweep",
+    description: "An NFT marketplace Aggregator.",
+    image: (
+      <Image src="/smolsweepv0_banner.png" alt="Smolsweep Project Banner" />
+    ),
+    tools: [
+      {
+        name: "Python",
+        type: "language",
+      },
+      {
+        name: "numpy",
+        type: "technology",
+      },
+      {
+        name: "pandas",
+        type: "technology",
+      },
+      {
+        name: "scikit-learn",
+        type: "technology",
+      },
+    ],
+    technologies: [
+      {
+        name: "numpy",
+        icon: <NumpyIcon size={techIconSize} />,
+      },
+      {
+        name: "pandas",
+        icon: <PandasIcon size={techIconSize} />,
+      },
+      {
+        name: "scikit-learn",
+        icon: <ScikitLearnIcon size={techIconSize} />,
+      },
+    ],
+    languages: [
+      {
+        name: "Python",
+        icon: <PythonIcon size={techIconSize} />,
+      },
+    ],
+    links: (
+      <>
+        <Flex>
+          <Link href="https://github.com/karmabadger/Pharmahacks2019">
+            Github
+          </Link>
+        </Flex>
+      </>
+    ),
+  },
+  {
     id: "pharmahacks-2019",
     name: "Pharmahacks 2019 (Winner)",
     image: <Image src="/pharmahacks_banner.png" alt="Norway" />,
