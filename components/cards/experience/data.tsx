@@ -487,7 +487,7 @@ const data: ExperienceCardProps[] = [
         },
         {
           name: "Jimp.js",
-          icon: <BsFillPencilFill size={techIconSize} />,
+          icon: <BsFillPencilFill size={techIconSize} color="red" />,
         },
         {
           name: "Foundry",
@@ -545,11 +545,11 @@ const data: ExperienceCardProps[] = [
         },
         {
           name: "Websockets",
-          icon: <WebsocketIcon size={techIconSize} color="#4B32C3" />,
+          icon: <WebsocketIcon size={techIconSize} color="#FF4300" />,
         },
         {
           name: "REST API",
-          icon: <AiTwotoneSetting size={techIconSize} />,
+          icon: <AiTwotoneSetting size={techIconSize} color="pink" />,
         },
       ],
       languages: [

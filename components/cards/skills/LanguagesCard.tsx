@@ -1,9 +1,19 @@
 import React from "react";
 
-import { Badge, Card, Flex, Group, Text } from "@mantine/core";
+import {
+  Badge,
+  Card,
+  Center,
+  Flex,
+  Group,
+  List,
+  Text,
+  ThemeIcon,
+} from "@mantine/core";
 import Image from "next/image";
 import useColorScheme from "@/hooks/useColorScheme";
 
+import { languagesData } from "./data";
 const LanguagesCard = () => {
   const [colorScheme, setColorScheme] = useColorScheme();
   return (
@@ -16,7 +26,7 @@ const LanguagesCard = () => {
         />
       </Card.Section> */}
 
-      <Group position="apart" mt="md" mb="xs">
+      {/* <Group position="apart" mt="md" mb="xs">
         <Text weight={500}>Languages</Text>
         <Badge color="pink" variant="light">
           On Sale
@@ -26,7 +36,38 @@ const LanguagesCard = () => {
       <Text size="sm" color="dimmed">
         With Fjord Tours you can explore more of the magical fjord landscapes
         with tours and activities on and around the fjords of Norway
-      </Text>
+      </Text> */}
+
+      <Flex direction="column" gap={10}>
+        <Text mt="md" fz="lg">
+          Languages:
+        </Text>
+        <List
+          style={{
+            alignItems: "center",
+          }}
+        >
+          {languagesData.map((language) => {
+            return (
+              <List.Item
+                style={{
+                  alignItems: "center",
+                }}
+                key={language.name}
+                icon={
+                  <ThemeIcon color="none" size={25} radius="xl">
+                    {language.icon}
+                  </ThemeIcon>
+                }
+              >
+                <Center>
+                  <Text>{language.name}</Text>
+                </Center>
+              </List.Item>
+            );
+          })}
+        </List>
+      </Flex>
     </Card>
   );
 };

@@ -1,8 +1,19 @@
 import React from "react";
 
-import { Badge, Card, Flex, Group, Text } from "@mantine/core";
+import {
+  Badge,
+  Card,
+  Center,
+  Flex,
+  Group,
+  List,
+  Text,
+  ThemeIcon,
+} from "@mantine/core";
 import Image from "next/image";
 import useColorScheme from "@/hooks/useColorScheme";
+
+import { technologiesData } from "./data";
 
 const TechnologiesCard = () => {
   const [colorScheme, setColorScheme] = useColorScheme();
@@ -16,7 +27,7 @@ const TechnologiesCard = () => {
         />
       </Card.Section> */}
 
-      <Group position="apart" mt="md" mb="xs">
+      {/* <Group position="apart" mt="md" mb="xs">
         <Text weight={500}>Technologies</Text>
         <Badge color="pink" variant="light">
           On Sale
@@ -26,7 +37,38 @@ const TechnologiesCard = () => {
       <Text size="sm" color="dimmed">
         With Fjord Tours you can explore more of the magical fjord landscapes
         with tours and activities on and around the fjords of Norway
-      </Text>
+      </Text> */}
+
+      <Flex direction="column" gap={10}>
+        <Text mt="md" fz="lg">
+          Technologies:
+        </Text>
+        <List
+          style={{
+            alignItems: "center",
+          }}
+        >
+          {technologiesData.map((technology) => {
+            return (
+              <List.Item
+                style={{
+                  alignItems: "center",
+                }}
+                key={technology.name}
+                icon={
+                  <ThemeIcon color="none" size={25} radius="xl">
+                    {technology.icon}
+                  </ThemeIcon>
+                }
+              >
+                <Center>
+                  <Text>{technology.name}</Text>
+                </Center>
+              </List.Item>
+            );
+          })}
+        </List>
+      </Flex>
     </Card>
   );
 };
