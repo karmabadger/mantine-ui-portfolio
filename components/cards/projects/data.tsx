@@ -615,11 +615,11 @@ const data: ProjectCardProps[] = [
     languages: [
       {
         name: "Rust",
-        icon: <SiRust />,
+        icon: <SiRust size={techIconSize} />,
       },
       {
         name: "Solidity",
-        icon: <SiSolidity />,
+        icon: <SiSolidity size={techIconSize} />,
       },
     ],
   },
