@@ -268,7 +268,7 @@ const data: ExperienceCardProps[] = [
       {
         name: "Smart Contract Engineering",
         description:
-          "Design and development of the original smart contract library that would be used for the KPR project. The library passed an audit by a third party and was used as a base for the entire project. The library was also optimized to be as gas efficient as possible and to be able to handle all of the different use cases that were required.",
+          "Design and development of the original smart contract library that would be used for the KPR project. The library passed an audit by a third party and was used as a base for the entire project. The library was also optimized to be as gas efficient as possible and to be able to handle all of the different use cases that were required and was also extensively tested with unit tests and integration tests.",
         technologies: [
           {
             name: "Solidity",
@@ -595,7 +595,8 @@ const data: ExperienceCardProps[] = [
     projectsData: [
       {
         name: "Shift Web Backend Application",
-        description: "",
+        description:
+          "Engineered and developed a Web Backend Server to aggregate data from multiple sources and provide a single API for the frontend application. The server is built using Rust and Actix-Web and uses MongoDB as the database. The server is also built using a modular design pattern with each component in its own file and using a component handler to handle all components. The codebase is also fully typed and uses static type checking and uses a custom Fixed Point Number type. The server is also built to be as fast as possible and uses a LRU-cache to cache data and uses websockets to push data to the frontend application.",
         technologies: [
           {
             name: "Rust",
@@ -662,7 +663,8 @@ const data: ExperienceCardProps[] = [
       },
       {
         name: "Shift Smart Contracts",
-        description: "",
+        description:
+          "Designed and developed smart contracts for Smolsweep which allows users to buy NFTs and items from multiple marketplaces in bulk. The smart contracts are built using Solidity and are built using the Foundry framework and were tested with unit tests. The smart contracts are designed using a modular and composable design pattern with the ERC-2535 Diamond Pattern with each facet and component of the contract in its own file and using a proxy contract to delegate calls to other contracts from.",
         technologies: [
           {
             name: "Solidity",
@@ -689,7 +691,8 @@ const data: ExperienceCardProps[] = [
       },
       {
         name: "Shift Web Frontend Application",
-        description: "",
+        description:
+          "Designed and developed the Shift Web Frontend application. The application is built using React.js and Next.js and uses Tailwind CSS for the UI components. The application is also built using Typescript and uses ethers.js to interact with the smart contracts. The application is also built using a modular design pattern with each component in its own file and using a component handler to handle all components. The codebase is also fully typed and uses static type checking.",
         technologies: [
           {
             name: "React.js",
@@ -711,12 +714,17 @@ const data: ExperienceCardProps[] = [
             name: "ethers.js",
             type: "technology",
           },
+          {
+            name: "Tailwind CSS",
+            type: "technology",
+          },
         ],
         link: "https://www.shift.lol/",
       },
       {
         name: "Smolsweep Web Frontend Application",
-        description: "",
+        description:
+          "Designed and developed the Smolsweep web application which is a frontend application that allows users to interact with the Smolsweep smart contracts and buy items from Treasure Marketplace in bulk. The application is built using React.js and Next.js and uses Chakra UI and Material UI for the UI components. The application is also built using Typescript and uses ethers.js to interact with the smart contracts. The application is also built using a modular design pattern with each component in its own file and using a component handler to handle all components. The codebase is also fully typed and uses static type checking.",
         technologies: [
           {
             name: "React.js",
@@ -755,7 +763,8 @@ const data: ExperienceCardProps[] = [
       },
       {
         name: "Smolsweep Smart Contracts",
-        description: "",
+        description:
+          "Designed and developed smart contracts for Smolsweep which allows users to buy NFTs and items from Treasure Marketplace in bulk. The smart contracts are built using Solidity and are built using the Foundry framework and were tested with unit tests.",
         technologies: [
           {
             name: "Solidity",

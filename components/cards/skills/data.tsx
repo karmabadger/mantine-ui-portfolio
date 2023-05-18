@@ -19,10 +19,12 @@ import {
   SiChakraui,
   SiMui,
   SiSharp,
+  SiAssemblyscript,
 } from "react-icons/si";
 import { DiJava, DiRust } from "react-icons/di";
 import {
   CIcon,
+  CPlusPlusIcon,
   CSharpIcon,
   JavaIcon,
   PythonIcon,
@@ -48,7 +50,7 @@ type Technology = {
   icon: React.ReactNode;
 };
 
-const techIconSize = "25";
+const techIconSize = 25;
 
 const languagesData: Language[] = [
   {
@@ -85,11 +87,11 @@ const languagesData: Language[] = [
   },
   {
     name: "C++",
-    icon: <CIcon size={techIconSize} />,
+    icon: <CPlusPlusIcon size={techIconSize} />,
   },
   {
     name: "x86 Assembly",
-    icon: <CIcon size={techIconSize} />,
+    icon: <SiAssemblyscript size={techIconSize} color="#007ACC" />,
   },
 ];
 
@@ -142,7 +144,7 @@ const technologiesData: Technology[] = [
     name: "Foundry",
     icon: (
       <Image
-        src="/images/icons/foundry_icon.png"
+        src="/foundry_icon.png"
         height={techIconSize}
         width={techIconSize}
         alt="Foundry Icon"
@@ -161,8 +163,8 @@ const technologiesData: Technology[] = [
     name: "Ethers.js",
     icon: (
       <Image
-        src="/images/icons/ethers_icon.png"
-        height={techIconSize}
+        src="/ethers_icon.png"
+        height={techIconSize - 5}
         width={techIconSize}
         alt="Ethers.js Icon"
       />
@@ -172,7 +174,7 @@ const technologiesData: Technology[] = [
     name: "Web3.js",
     icon: (
       <Image
-        src="/images/icons/web3_icon.png"
+        src="/web3js_icon.png"
         height={techIconSize}
         width={techIconSize}
         alt="Web3.js Icon"

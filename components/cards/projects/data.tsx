@@ -141,7 +141,7 @@ const data: ProjectCardProps[] = [
       </Flex>
     ),
     description:
-      "A hypercasual mobile game for Android made using Unity3d with entirely custom assets.",
+      "A hypercasual mobile game for Android made using Unity3d with custom assets made from scratch.",
     tools: [
       {
         name: "C#",
@@ -172,7 +172,7 @@ const data: ProjectCardProps[] = [
       <>
         <Flex direction="column" gap={10}>
           <Link href="https://looper.bumpystudio.xyz/">
-            Try it out on your browser!
+            Click here to try it out on your browser!
           </Link>
           <Link href="https://gitlab.com/wenxuan27/looper-game">
             Repository
@@ -184,16 +184,9 @@ const data: ProjectCardProps[] = [
   {
     id: "repo-d",
     name: "Repo-Daemon (WIP)",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    image: <Image src="/ferris_banner.png" alt="Ferris Banner" />,
     description:
-      "A simple command line daemon that listen for git events and webhook events and automatically updates, build and deploys code from a git repository on a remote server.",
+      "A simple command line daemon that listen for git events and webhook events and automatically updates, build and deploys code from a git repository on a remote server. Work in progress.",
     tools: [
       {
         name: "Rust",
@@ -227,16 +220,9 @@ const data: ProjectCardProps[] = [
   {
     id: "c-lite-compiler",
     name: "C-Lite Compiler",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    image: <Image src="/java_banner.png" alt="Java Banner" />,
     description:
-      "A compiler for a subset of the C programming language. The compiler is implemented in Java using a custom visitor design pattern.",
+      "A compiler for a subset of the C programming language. The compiler is implemented in Java using a custom visitor design pattern. The compiler generates MIPS assembly code that can be run on the Mars MIPS simulator.",
     tools: [
       {
         name: "Java",
@@ -247,7 +233,12 @@ const data: ProjectCardProps[] = [
         type: "language",
       },
     ],
-    technologies: [],
+    technologies: [
+      {
+        name: "Mars MIPS Simulator",
+        icon: <JavaIcon size={techIconSize} />,
+      },
+    ],
     languages: [
       {
         name: "Java",
@@ -257,13 +248,19 @@ const data: ProjectCardProps[] = [
         name: "C",
         icon: <CIcon size={techIconSize} />,
       },
+      {
+        name: "MIPS Assembly",
+        icon: <SiAssemblyscript size={techIconSize} color="#007ACC" />,
+      },
     ],
-    links: <>{/* <a href="">Github</a> */}</>,
+    // links: <>{/* <a href="">Github</a> */}</>,
   },
   {
     id: "mcgame-jam-2020",
     name: "McGame Jam 2020",
-    image: <Image src="mcgamejam2020_banner.png" alt="Norway" />,
+    image: (
+      <Image src="mcgamejam2020_banner.png" alt="McGame Jam 2020 Banner" />
+    ),
     description:
       "A 2D Zombie Apocalypse survival game made in 48 hours for the McGame Jam 2020. The game is made using Unity3d with entirely custom assets.",
     tools: [
@@ -356,7 +353,7 @@ const data: ProjectCardProps[] = [
   {
     id: "pharmahacks-2019",
     name: "Pharmahacks 2019 (Winner)",
-    image: <Image src="/pharmahacks_banner.png" alt="Norway" />,
+    image: <Image src="/pharmahacks_banner.png" alt="Pharmahacks Banner" />,
     description: "",
     tools: [
       {
@@ -479,16 +476,9 @@ const data: ProjectCardProps[] = [
   {
     id: "reddit-web-scraper",
     name: "Reddit Web Scraper",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    image: <Image src="/reddit_banner.png" alt="Reddit Banner" />,
     description:
-      "A web scraper for the ASB subreddit that scrapes posts and comments.",
+      "A web scraper for the ASB subreddit that scrapes posts and comments. The scraper is implemented in Python using the Selenium library and the Praw library and stores the data in a MongoDB database.",
     tools: [
       {
         name: "Python",
@@ -510,13 +500,7 @@ const data: ProjectCardProps[] = [
     technologies: [
       {
         name: "praw",
-        icon: (
-          <AiOutlineReddit
-            size={techIconSize}
-            color="#FF4300"
-            // style={{ backgroundColor: "white" }}
-          />
-        ),
+        icon: <AiOutlineReddit size={techIconSize} color="#FF4300" />,
       },
       {
         name: "REST API",
@@ -541,17 +525,10 @@ const data: ProjectCardProps[] = [
   },
   {
     id: "ASB-admin-gui-app",
-    name: "ASB Admin GUI App",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    name: "Subreddit Admin GUI App",
+    image: <Image src="/reddit_banner.png" alt="Reddit Banner" />,
     description:
-      "A GUI app for the ASB subreddit that allows moderators to easily manage the subreddit.",
+      "A GUI app for the ASB subreddit that allows moderators to easily manage the subreddit. Built using electron.js and express.js with a REST API backend Python script using Praw.",
     tools: [
       {
         name: "JS",
@@ -625,14 +602,7 @@ const data: ProjectCardProps[] = [
   {
     id: "solidity parser",
     name: "Solidity Parser",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    image: <Image src="ferris_banner.png" alt="Rust Banner" />,
     description:
       "A Lexer and Parser for Solidity, a programming language for Ethereum smart contracts made using Rust.",
     tools: [
@@ -647,19 +617,16 @@ const data: ProjectCardProps[] = [
         name: "Rust",
         icon: <SiRust />,
       },
+      {
+        name: "Solidity",
+        icon: <SiSolidity />,
+      },
     ],
   },
   {
     id: "tictactoe-solidity-on-the-blockchain",
     name: "TicTacToe on the Blockchain",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    image: <Image src="/tictactoe_banner.png" alt="Tictactoe Banner" />,
     description:
       "A TicTacToe game made using Solidity, a programming language for Ethereum smart contracts.",
     tools: [
@@ -746,14 +713,7 @@ const data: ProjectCardProps[] = [
   {
     id: "marketplace-web-app-django",
     name: "Marketplace Web App using Django",
-    image: (
-      <Image
-        src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzY29yZCUyMGJvdCUyMHNlcnZlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-        height={160}
-        width={320}
-        alt="Norway"
-      />
-    ),
+    image: <Image src="/django_banner.webp" alt="Django Banner" />,
     description:
       "A marketplace web app made using Django, a Python web framework.",
     tools: [

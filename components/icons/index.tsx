@@ -13,6 +13,7 @@ import WebsocketIcon from "./WebsocketIcon";
 import NumpyIcon from "./NumpyIcon";
 import PandasIcon from "./PandasIcons";
 import ScikitLearnIcon from "./ScikitLearnIcon";
+import CPlusPlusIcon from "./CPlusPlusIcon";
 
 export {
   CIcon,
@@ -30,4 +31,5 @@ export {
   NumpyIcon,
   PandasIcon,
   ScikitLearnIcon,
+  CPlusPlusIcon,
 };
