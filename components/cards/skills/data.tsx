@@ -20,6 +20,9 @@ import {
   SiMui,
   SiSharp,
   SiAssemblyscript,
+  SiMysql,
+  SiRedis,
+  SiPhp,
 } from "react-icons/si";
 import { DiJava, DiRust } from "react-icons/di";
 import {
@@ -54,24 +57,24 @@ const techIconSize = 25;
 
 const languagesData: Language[] = [
   {
-    name: "TypeScript",
-    icon: <SiTypescript size={techIconSize} color="#007ACC" />,
-  },
-  {
     name: "Rust",
     icon: <SiRust size={techIconSize} />,
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript size={techIconSize} color="#007ACC" />,
   },
   {
     name: "JavaScript",
     icon: <SiJavascript size={techIconSize} color="#F7DF1E" />,
   },
   {
-    name: "Python",
-    icon: <PythonIcon size={techIconSize} />,
-  },
-  {
     name: "Java",
     icon: <JavaIcon size={techIconSize} />,
+  },
+  {
+    name: "Python",
+    icon: <PythonIcon size={techIconSize} />,
   },
   {
     name: "Solidity",
@@ -93,6 +96,10 @@ const languagesData: Language[] = [
     name: "x86 Assembly",
     icon: <SiAssemblyscript size={techIconSize} color="#007ACC" />,
   },
+  {
+    name: "PHP",
+    icon: <SiPhp size={techIconSize} color="#777BB4" />,
+  },
 ];
 
 const technologiesData: Technology[] = [
@@ -101,24 +108,28 @@ const technologiesData: Technology[] = [
     icon: <SiNodedotjs size={techIconSize} color="#339933" />,
   },
   {
-    name: "Express.js",
-    icon: <SiExpress size={techIconSize} color="#339933" />,
-  },
-  {
     name: "Fastify.js",
     icon: <SiFastify size={techIconSize} />,
   },
   {
-    name: "React",
-    icon: <SiReact size={techIconSize} color="#61DAFB" />,
+    name: "Express.js",
+    icon: <SiExpress size={techIconSize} color="#339933" />,
   },
   {
     name: "Next.js",
     icon: <SiNextdotjs size={techIconSize} />,
   },
   {
-    name: "Django",
-    icon: <SiDjango size={techIconSize} />,
+    name: "Actix Web",
+    icon: <SiRust size={techIconSize} />,
+  },
+  {
+    name: "Tokio",
+    icon: <TokioIcon size={techIconSize} />,
+  },
+  {
+    name: "React",
+    icon: <SiReact size={techIconSize} color="#61DAFB" />,
   },
   {
     name: "Unity3D",
@@ -131,14 +142,6 @@ const technologiesData: Technology[] = [
   {
     name: "Docker",
     icon: <SiDocker size={techIconSize} color="#2496ED" />,
-  },
-  {
-    name: "Actix Web",
-    icon: <DiRust size={techIconSize} />,
-  },
-  {
-    name: "Tokio",
-    icon: <TokioIcon size={techIconSize} />,
   },
   {
     name: "Foundry",
@@ -160,34 +163,8 @@ const technologiesData: Technology[] = [
     icon: <SiMongodb size={techIconSize} color="#47A248" />,
   },
   {
-    name: "Ethers.js",
-    icon: (
-      <Image
-        src="/ethers_icon.png"
-        height={techIconSize - 5}
-        width={techIconSize}
-        alt="Ethers.js Icon"
-      />
-    ),
-  },
-  {
-    name: "Web3.js",
-    icon: (
-      <Image
-        src="/web3js_icon.png"
-        height={techIconSize}
-        width={techIconSize}
-        alt="Web3.js Icon"
-      />
-    ),
-  },
-  {
     name: "GraphQL",
     icon: <SiGraphql size={techIconSize} color="#E10098" />,
-  },
-  {
-    name: "PostgreSQL",
-    icon: <SiPostgresql size={techIconSize} color="#336791" />,
   },
   {
     name: "REST API",
@@ -216,6 +193,44 @@ const technologiesData: Technology[] = [
   {
     name: "Jimp.js",
     icon: <BsFillPencilFill size={techIconSize} color="red" />,
+  },
+  {
+    name: "Django",
+    icon: <SiDjango size={techIconSize} />,
+  },
+  {
+    name: "MySQL",
+    icon: <SiMysql size={techIconSize} color="#4479A1" />,
+  },
+  {
+    name: "Redis",
+    icon: <SiRedis size={techIconSize} color="#DC382D" />,
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql size={techIconSize} color="#336791" />,
+  },
+  {
+    name: "Ethers.js",
+    icon: (
+      <Image
+        src="/ethers_icon.png"
+        height={techIconSize - 5}
+        width={techIconSize}
+        alt="Ethers.js Icon"
+      />
+    ),
+  },
+  {
+    name: "Web3.js",
+    icon: (
+      <Image
+        src="/web3js_icon.png"
+        height={techIconSize}
+        width={techIconSize}
+        alt="Web3.js Icon"
+      />
+    ),
   },
   {
     name: "Taichi",
