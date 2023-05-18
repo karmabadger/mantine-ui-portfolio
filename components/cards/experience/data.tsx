@@ -368,9 +368,9 @@ const data: ExperienceCardProps[] = [
     },
     projectsData: [
       {
-        name: "Various Freelance Projects",
+        name: "Freelance Projects",
         description:
-          "Worked on various private Freelance software engineering projects and consulted on various projects using a wide range of technologies and languages. Including Smart Contracts, Full Stack Web Development and some GUI applications using Electron.js",
+          "Software Engineering work and consulting for various private projects as a freelancer using a wide range of technologies and languages, including Full Stack Web Development, Commandline utilties and tools, Smart Contracts engineering, and some GUI applications using Electron.js",
         technologies: [
           {
             name: "TS",
