@@ -295,7 +295,7 @@ const data: ExperienceCardProps[] = [
       {
         name: "Infrastructure, Deployment, and DevOps",
         description:
-          "Design and development of the original smart contract library that would be used for the KPR project. The library passed an audit by a third party and was used as a base for the entire project. The library was also optimized to be as gas efficient as possible and to be able to handle all of the different use cases that were required.",
+          "Devops and infrastructure work for the original web application, smart contracts and command line tools.",
         technologies: [
           {
             name: "Next.js",
