@@ -245,7 +245,7 @@ const data: ExperienceCardProps[] = [
       {
         name: "Custom Art Generator",
         description:
-          "Design and development of an entire custom art generator along with a suite of tools from scratch using Typescript and Sharp.js (blazingly fast image manipulation library). true randomness, With over 1000 assets, hundreds of of logical rules, and a over 10 000 quality pieces to generate out of unimaginably large number of possibilities, I had to design a system that would be able to handle all of the numerous different requirements and edge cases as well as optimize it to compute as fast as possible. Requirements were also constantly changing with new ones added often. The result is a blazingly fast and optimized (the bottleneck was the image manipulation library) and flexible system that was able to handle the load.",
+          "Design and development of an entire custom art generator along with a suite of tools from scratch using Typescript and Sharp.js (blazingly fast image manipulation library). With over 1000 assets, hundreds of of logical rules, and a over 10 000 quality pieces to generate out of unimaginably large number of possibilities, I had to design a system that would be able to handle all of the numerous different requirements and edge cases as well as optimize it to compute as fast as possible and uses true randomness. Requirements were also constantly changing with new ones added often. The result is a blazingly fast and optimized (the bottleneck was the image manipulation library) and flexible system that was able to handle the load.",
         technologies: [
           {
             name: "Typescript",
@@ -363,7 +363,7 @@ const data: ExperienceCardProps[] = [
     jobData: {
       companyName: "Freelance",
       title:
-        "Freelance Software Engineer and Consultant (Full Stack, Smart Contracts)",
+        "Freelance Software Engineer and Consultant",
       time: "2020-2023",
     },
     projectsData: [

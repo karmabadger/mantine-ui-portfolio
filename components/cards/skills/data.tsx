@@ -233,6 +233,29 @@ const technologiesData: Technology[] = [
     ),
   },
   {
+    name: "OpenGL",
+    icon: (
+      <Image
+        src="/opengl_icon.png"
+        height={techIconSize}
+        width={techIconSize}
+        alt="OpenGL Icon"
+      />
+    ),
+    
+  },
+  {
+    name: "p5.js",
+    icon: (
+      <Image
+        src="/p5js_icon.png"
+        height={techIconSize}
+        width={techIconSize}
+        alt="p5.js Icon"
+      />
+    ),
+  },
+  {
     name: "Taichi",
     icon: <TaichiIcon size={techIconSize} />,
   },

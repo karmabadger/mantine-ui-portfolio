@@ -11,7 +11,7 @@ const SocialIcons = () => {
     <>
       <Flex>
         <SocialIcon
-          url="https://www.linkedin.com/in/wen-chen-1a1a1a1a1/"
+          url="https://www.linkedin.com/in/wenxuan27/"
           id="linkedin"
           style={{ height: 35, width: 35, margin }}
         />
