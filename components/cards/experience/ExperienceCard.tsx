@@ -39,8 +39,23 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
   const [colorScheme, setColorScheme] = useColorScheme();
   return (
     <Card padding="lg" radius="md" withBorder={colorScheme === "light"}>
-      <Card.Section>
-        <Image src={imageData.src} height={220} alt={imageData.alt} />
+      <Card.Section
+        // style={{
+        //   minHeight: imageData.minHeight,
+        //   maxHeight: imageData.maxHeight,
+        // }}
+      >
+        <Image
+          src={imageData.src}
+          // style={{
+          //   minHeight: imageData.minHeight,
+          //   maxHeight: imageData.maxHeight,
+          // }}
+          // mih={imageData.minHeight}
+          // mah={imageData.maxHeight}
+          height={imageData.height}
+          alt={imageData.alt}
+        />
       </Card.Section>
 
       <Tabs defaultValue="detail">

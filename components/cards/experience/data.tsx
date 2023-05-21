@@ -40,6 +40,9 @@ type ExperienceCardProps = {
   imageData: {
     src: string;
     alt: string;
+    minHeight?: number;
+    maxHeight?: number;
+    height?: number;
   };
   jobData: {
     companyName: string;
@@ -233,6 +236,7 @@ const data: ExperienceCardProps[] = [
     imageData: {
       src: "/kpr_banner.png",
       alt: "KPRVerse",
+      height: 400,
     },
     jobData: {
       companyName: "Kprverse (kprverse.com)",
@@ -359,11 +363,11 @@ const data: ExperienceCardProps[] = [
     imageData: {
       src: "/freelance_banner.jpg",
       alt: "Freelance",
+      height: 400,
     },
     jobData: {
       companyName: "Freelance",
-      title:
-        "Freelance Software Engineer and Consultant",
+      title: "Freelance Software Engineer and Consultant",
       time: "2020-2023",
     },
     projectsData: [
@@ -870,10 +874,10 @@ const data: ExperienceCardProps[] = [
       alt: "CSUS Mentorship Banner",
     },
     jobData: {
-      companyName: "CSUS",
+      companyName: "CSUS Industry Mentorship Program",
       title: "Mentor, Lecuturer and Workshop Host",
-      link: "https://www.csus.edu/",
-      time: "2020",
+      link: "https://mcgill-csus.ca/industry-mentorship-program",
+      time: "2022",
       icon: (
         <Image src="/CSUS_icon.png" alt="CSUS Icon" width={50} height={50} />
       ),
@@ -949,7 +953,7 @@ const data: ExperienceCardProps[] = [
             type: "technology",
           },
         ],
-        link: "https://www.csus.edu/",
+        link: "https://mcgill-csus.ca/industry-mentorship-program",
       },
     ],
     technologiesData: {
