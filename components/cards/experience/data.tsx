@@ -1029,9 +1029,9 @@ const data: ExperienceCardProps[] = [
     },
     projectsData: [
       {
-        name: "GUI Application for Data Cleaning, Analysis and Compilation",
-        description:
-          "Engineered and Developed a GUI application using Electron.js and Typescript to clean that interfaces with a Python, Pandas and numpy backend to analyze, compile and export data from multiple sources. Used Plotly.js and Plotly to visualize data through the GUI. The design of the GUI application was created using the Brand Design of the company in mind. The application ended up being used by the company globally.",
+        name: "Development and Global Deployment of a Data Management GUI Application at Novartis",
+        description: `At Novartis, I engineered a GUI application using Electron.js, TypeScript, and Node.js, designed to streamline the company's sales data handling process. The application interfaced with a Python backend, leveraging powerful data manipulation libraries like Pandas and Numpy to compile, clean, analyze, and export data from various sources. The design of the GUI application was created with the company's brand aesthetic in mind, ensuring a seamless experience for users.
+          To maximize the utility of the application, I integrated Plotly.js for data visualization, enabling users to gain insights at a glance directly within the GUI. The application was globally deployed across Novartis, significantly enhancing productivity and efficiency in the company's data management processes. This project showcases my ability to develop high-impact software solutions that not only meet client needs but also contribute to operational efficiency on a global scale.`,
         technologies: [
           {
             name: "Typescript",

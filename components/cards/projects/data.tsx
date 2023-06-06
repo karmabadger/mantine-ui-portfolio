@@ -98,8 +98,7 @@ const data: ProjectCardProps[] = [
         </video>
       </Flex>
     ),
-    description:
-      "A 2D soft body simulation using a mass-spring system. The simulation is implemented in Python using Taichi.",
+    description: `Cross-platform Soft Body Simulator in Python which incorporates a particle system with collision detection, utilizes both the spring-mass and pressure forces models, and employs an RK4 integrator to ensure precision.`,
     tools: [
       {
         name: "Python",
@@ -218,11 +217,11 @@ const data: ProjectCardProps[] = [
     ),
   },
   {
-    id: "c-lite-compiler",
-    name: "C-Lite Compiler",
+    id: "c-compiler",
+    name: "C Compiler",
     image: <Image src="/java_banner.png" alt="Java Banner" />,
     description:
-      "A compiler for a subset of the C programming language. The compiler is implemented in Java using a custom visitor design pattern. The compiler generates MIPS assembly code that can be run on the Mars MIPS simulator.",
+      "A compiler for a subset of the C programming language. Built from scratch supporting pointers, structs, recursion, branching, and looping, with graph-coloring register allocation and peephole using Java with a custom Vistor Pattern Design. The compiler generates MIPS assembly code that can be run on the Mars MIPS simulator.",
     tools: [
       {
         name: "Java",

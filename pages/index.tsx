@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Flex justify="flex-start" direction="column" gap={200}>
+        <Flex justify="flex-start" direction="column" gap={130}>
           <Box>
             <Box style={{ height: "4em" }}></Box>
             <Flex justify="flex-start" direction="column" gap={10}>
@@ -65,17 +65,19 @@ export default function Home() {
           </Box>
           <Box>
             <Text>
-              I&apos;m a software engineer currently based in Montreal.
-              Graduated from McGill University with a Bachelor of Science in
-              Computer Science, I&apos;ve been working in the industry for 2
-              years and building software for over 7 years. I have a passion
-              game development and have been working on a few projects on the side. 
+              Based in Montreal, I&apos;m a software engineer with a Computer
+              Science degree from McGill University and over 7 years of
+              experience in coding. I specialize in designing and implementing
+              innovative full-stack web applications and blockchain
+              applications, and have a deep-seated passion for game development.
+              My work is a blend of professional commitment and personal
+              interest.
             </Text>
             <br />
             <Text>
               In addition to my love of technology, I have an interest in
               history, politics and finance. I also enjoy playing tennis,
-              badminton
+              badminton and music.
             </Text>
           </Box>
         </Flex>
