@@ -9,14 +9,7 @@ const ContactCards = () => {
   return (
     <Flex justify="flex-start" direction="column" gap={20}>
       <Box>
-        {/* <Card
-          padding="lg"
-          radius="md"
-          withBorder={colorScheme === "light"}
-        
-        >
-        </Card> */}
-          <SocialIcons />
+        <SocialIcons />
       </Box>
     </Flex>
   );
