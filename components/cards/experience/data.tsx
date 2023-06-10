@@ -42,7 +42,7 @@ type ExperienceCardProps = {
     alt: string;
     minHeight?: number;
     maxHeight?: number;
-    height?: number;
+    height?: number | string;
   };
   jobData: {
     companyName: string;
@@ -236,7 +236,6 @@ const data: ExperienceCardProps[] = [
     imageData: {
       src: "/kpr_banner.png",
       alt: "KPRVerse",
-      height: 400,
     },
     jobData: {
       companyName: "Kprverse (kprverse.com)",
@@ -363,7 +362,6 @@ const data: ExperienceCardProps[] = [
     imageData: {
       src: "/freelance_banner.jpg",
       alt: "Freelance",
-      height: 400,
     },
     jobData: {
       companyName: "Freelance",

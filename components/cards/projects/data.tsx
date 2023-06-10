@@ -221,7 +221,7 @@ const data: ProjectCardProps[] = [
     name: "C Compiler",
     image: <Image src="/java_banner.png" alt="Java Banner" />,
     description:
-      "A compiler for a subset of the C programming language. Built from scratch supporting pointers, structs, recursion, branching, and looping, with graph-coloring register allocation and peephole using Java with a custom Vistor Pattern Design. The compiler generates MIPS assembly code that can be run on the Mars MIPS simulator.",
+      "A compiler for a subset of the C programming language targeting MIPS Assembly. Built from scratch supporting pointers, structs, recursion, branching, and looping, with graph-coloring register allocation and peephole using Java with a custom Vistor Pattern Design. The compiler generates MIPS assembly code that can be run on the Mars MIPS simulator.",
     tools: [
       {
         name: "Java",
@@ -297,7 +297,7 @@ const data: ProjectCardProps[] = [
   {
     id: "smolsweep",
     name: "Smolsweep",
-    description: "An NFT marketplace Aggregator.",
+    description: `Smolsweep is a cutting-edge platform for bulk purchasing of NFTs across multiple marketplaces. Leveraging secure and optimized Solidity smart contracts and blockchain technologies and an intuitive frontend developed with React.js, Next.js, and Material UI, Smolsweep optimizes transaction efficiency, providing users with a streamlined experience in the rapidly expanding NFT market`,
     image: (
       <Image src="/smolsweepv0_banner.png" alt="Smolsweep Project Banner" />
     ),
@@ -353,7 +353,7 @@ const data: ProjectCardProps[] = [
     id: "pharmahacks-2019",
     name: "Pharmahacks 2019 (Winner)",
     image: <Image src="/pharmahacks_banner.png" alt="Pharmahacks Banner" />,
-    description: "",
+    description: `Machine learning in Python using Scikit Learn and Jupyter. Predicted and reported future values based on best fit.`,
     tools: [
       {
         name: "Python",

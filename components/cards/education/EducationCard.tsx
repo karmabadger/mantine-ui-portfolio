@@ -17,6 +17,7 @@ import { MdWorkOutline } from "react-icons/md";
 
 const EducationCard: FC<EducationDataProps> = ({ id, degreeData, courses }) => {
   const [colorScheme, setColorScheme] = useColorScheme();
+
   return (
     <Card padding="lg" radius="md" withBorder={colorScheme === "light"}>
       <Card.Section component="a">{degreeData.image}</Card.Section>
@@ -44,6 +45,23 @@ const EducationCard: FC<EducationDataProps> = ({ id, degreeData, courses }) => {
           <Text size="sm" color="dimmed">
             {degreeData.degree} in {degreeData.major}
           </Text>
+
+          <Flex direction="column" justify="flex-start" align="flex-start">
+            <Box mt="md" mb="xs">
+              <List>
+                {degreeData.notes != null &&
+                  degreeData.notes.map((note, index) => {
+                    return (
+                      <List.Item key={index}>
+                        <Text size="sm" color="dimmed">
+                          {note}
+                        </Text>
+                      </List.Item>
+                    );
+                  })}
+              </List>
+            </Box>
+          </Flex>
         </Tabs.Panel>
 
         {courses != null && courses.length > 0 && (

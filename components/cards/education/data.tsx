@@ -14,6 +14,7 @@ type DegreeData = {
   time: string;
   link?: string;
   image: React.ReactNode;
+  notes?: string[];
 };
 
 type Course = {
@@ -32,15 +33,11 @@ const data: EducationDataProps[] = [
       major: "Computer Science",
       time: "2019 - 2022",
       link: "https://www.mcgill.ca/",
-      image: (
-        <Image
-          src="/mcgill_banner_2x.jpg"
-          height={600}
-          alt="Mcgill Banner"
-          //   fit="contain"
-          radius=""
-        />
-      ),
+      image: <Image src="/mcgill_banner_2x.jpg" alt="Mcgill Banner" />,
+      notes: [
+        `Excellence Scholarship for CS and ECSE.`,
+        `Mentor in the CSUS Industry Mentorship Program.`,
+      ],
     },
     courses: [
       {
@@ -187,11 +184,7 @@ const data: EducationDataProps[] = [
       time: "2017 - 2019",
       link: "https://www.johnabbott.qc.ca/",
       image: (
-        <Image
-          src="/johnabbott_banner.jpg"
-          alt="John Abbott College Banner"
-          height={600}
-        />
+        <Image src="/johnabbott_banner.jpg" alt="John Abbott College Banner" />
       ),
     },
   },
