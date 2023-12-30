@@ -22,6 +22,7 @@ import {
   SiRust,
   SiSolidity,
   SiTypescript,
+  SiPostgresql,
 } from "react-icons/si";
 
 import { AiTwotoneSetting } from "react-icons/ai";
@@ -238,7 +239,7 @@ const data: ExperienceCardProps[] = [
       technologies: [
         {
           name: "Next.js",
-          icon: <SiNextdotjs size={techIconSize} />,
+          icon: <SiNextdotjs color="#000000" size={techIconSize} />,
         },
         {
           name: "React.js",
@@ -264,6 +265,10 @@ const data: ExperienceCardProps[] = [
           name: "Progressive Web App",
           icon: <PWAIcon color="#68A063" size={techIconSize} />,
         },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql color="#68A063" size={techIconSize} />,
+        },
       ],
       languages: [
         {
@@ -276,7 +281,7 @@ const data: ExperienceCardProps[] = [
         },
         {
           name: "Rust",
-          icon: <SiRust size={techIconSize} />,
+          icon: <SiRust color="#000000" size={techIconSize} />,
         },
         {
           name: "Python",
