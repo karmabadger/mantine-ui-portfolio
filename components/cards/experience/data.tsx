@@ -35,6 +35,8 @@ import { TbBrandMantine } from "react-icons/tb";
 import { PythonIcon } from "@/components/icons";
 import { FaHardHat } from "react-icons/fa";
 
+import PWAIcon from "@/components/icons/PWAIcon";
+
 type ExperienceCardProps = {
   id: string;
   imageData: {
@@ -75,6 +77,214 @@ type ExperienceCardProps = {
 const techIconSize = 25;
 
 const data: ExperienceCardProps[] = [
+  // RR
+  {
+    id: "gestionrr",
+    imageData: {
+      src: "/apartments.jpg",
+      alt: "Apartments",
+    },
+    jobData: {
+      companyName: "Gestion RR",
+      title: "Software Engineer",
+      time: "2023",
+      icon: (
+        <Image src="/gestionrr.png" alt="gestionrr" width={50} height={50} />
+      ),
+    },
+    projectsData: [
+      {
+        name: "Unit Journey: A Full Stack Web Application for Real Estate Management",
+        description: `Engineered and Developed a Full-Stack Web Application for Real Estate Management. The application is built using React.js and Next.js for the frontend and Node.js and Rust for the backend. The application is also built using Typescript and uses MongoDB and PostgreSQL as the database.`,
+        technologies: [
+          {
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "Rust",
+            type: "language",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "React.js",
+            type: "technology",
+          },
+          {
+            name: "PWA",
+            type: "technology",
+          },
+          {
+            name: "MongoDB",
+            type: "technology",
+          },
+          {
+            name: "PostgreSQL",
+            type: "technology",
+          },
+        ],
+      },
+      {
+        name: "Custom Monthly Report Generator Desktop Application",
+        description: ``,
+        technologies: [
+          {
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "React.js",
+            type: "technology",
+          },
+          {
+            name: "Electron.js",
+            type: "technology",
+          },
+          {
+            name: "Excel.js",
+            type: "technology",
+          },
+        ],
+      },
+      {
+        name: "Full Stack Web Application for Accounts Payable Management",
+        description: `Engineered and Developed a Full-Stack Web Application for Real Estate Management. The application is built using React.js and Next.js for the frontend and Node.js and Express.js for the backend. The application is also built using Typescript and uses MongoDB as the database. The application is also built using a modular design pattern with each component in its own file and using a component handler to handle all components. The codebase is also fully typed and uses static type checking. The application is also built to be as fast as possible and uses a LRU-cache to cache data and uses websockets to push data to the frontend application.`,
+        technologies: [
+          {
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "React.js",
+            type: "technology",
+          },
+          {
+            name: "Electron.js",
+            type: "technology",
+          },
+          {
+            name: "Excel.js",
+            type: "technology",
+          },
+        ],
+      },
+      {
+        name: "Other Custom Internal Tools and Applications for employee Workflow Automation",
+        description: ``,
+        technologies: [
+          {
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "React.js",
+            type: "technology",
+          },
+          {
+            name: "Excel.js",
+            type: "technology",
+          },
+        ],
+      },
+    ],
+    technologiesData: {
+      technologies: [
+        {
+          name: "Next.js",
+          icon: <SiNextdotjs size={techIconSize} />,
+        },
+        {
+          name: "React.js",
+          icon: <SiReact color="#61DAFB" size={techIconSize} />,
+        },
+        {
+          name: "MongoDB",
+          icon: <SiMongodb color="#4DB33D" size={techIconSize} />,
+        },
+        {
+          name: "Mantine UI",
+          icon: <TbBrandMantine color="#339af0" size={techIconSize} />,
+        },
+        {
+          name: "Node.js",
+          icon: <SiNodedotjs color="#68A063" size={techIconSize} />,
+        },
+        {
+          name: "Electron.js",
+          icon: <SiElectron color="#68A063" size={techIconSize} />,
+        },
+        {
+          name: "Progressive Web App",
+          icon: <PWAIcon color="#68A063" size={techIconSize} />,
+        },
+      ],
+      languages: [
+        {
+          name: "TypeScript",
+          icon: <SiTypescript color="#3178c6" size={techIconSize} />,
+        },
+        {
+          name: "JavaScript",
+          icon: <SiJavascript color="#F0DB4F" size={techIconSize} />,
+        },
+        {
+          name: "Rust",
+          icon: <SiRust size={techIconSize} />,
+        },
+        {
+          name: "Python",
+          icon: <PythonIcon size={techIconSize} />,
+        },
+      ],
+    },
+  },
   // experience at Cyberbrokers
   {
     id: "cyberbrokers",
@@ -84,7 +294,7 @@ const data: ExperienceCardProps[] = [
     },
     jobData: {
       companyName: "Cyberbrokers",
-      title: "Software Engineer and Consultant",
+      title: "Software Engineer (Contract)",
       link: "https://www.cyberbrokers.com/",
       time: "2022-2023",
       icon: (
@@ -239,7 +449,7 @@ const data: ExperienceCardProps[] = [
     },
     jobData: {
       companyName: "Kprverse (kprverse.com)",
-      title: "Software Engineer and Consultant",
+      title: "Software Engineer",
       link: "www.kprverse.com",
       time: "2021-2023",
       icon: <KPRIcon size={50} />,
@@ -282,7 +492,7 @@ const data: ExperienceCardProps[] = [
             type: "technology",
           },
           {
-            name: "hardhat",
+            name: "Hardhat",
             type: "technology",
           },
           {
@@ -365,7 +575,7 @@ const data: ExperienceCardProps[] = [
     },
     jobData: {
       companyName: "Freelance",
-      title: "Freelance Software Engineer and Consultant",
+      title: "Freelance Software Engineer",
       time: "2020-2023",
     },
     projectsData: [
