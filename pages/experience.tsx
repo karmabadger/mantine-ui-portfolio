@@ -30,7 +30,7 @@ export default function Experience() {
               weight={700}
               style={{ display: "inline" }}
             >
-              Experience
+              Work Experience
             </Text>
           </Box>
 

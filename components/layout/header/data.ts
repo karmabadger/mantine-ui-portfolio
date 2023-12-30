@@ -12,7 +12,7 @@ const links: NavbarLink[] = [
   },
   {
     href: "/experience",
-    label: "Experience",
+    label: "Work Experience",
     name: "experience",
   },
   {
