@@ -137,6 +137,40 @@ const data: ExperienceCardProps[] = [
         ],
       },
       {
+        name: "Workflow Automation Full Stack Web Application for Accounts Payable Management",
+        description: `Engineered and Developed a Full-Stack Web Application for Accounts Payable Management, including expense approvals, invoice approvals, invoice payments and tracking.`,
+        technologies: [
+          {
+            name: "TS",
+            type: "language",
+          },
+          {
+            name: "JS",
+            type: "language",
+          },
+          {
+            name: "Node.js",
+            type: "technology",
+          },
+          {
+            name: "Next.js",
+            type: "technology",
+          },
+          {
+            name: "React.js",
+            type: "technology",
+          },
+          {
+            name: "Electron.js",
+            type: "technology",
+          },
+          {
+            name: "Excel.js",
+            type: "technology",
+          },
+        ],
+      },
+      {
         name: "Custom Monthly Report Generator Desktop Application",
         description: ``,
         technologies: [
@@ -171,41 +205,7 @@ const data: ExperienceCardProps[] = [
         ],
       },
       {
-        name: "Full Stack Web Application for Accounts Payable Management",
-        description: `Engineered and Developed a Full-Stack Web Application for Real Estate Management. The application is built using React.js and Next.js for the frontend and Node.js and Express.js for the backend. The application is also built using Typescript and uses MongoDB as the database. The application is also built using a modular design pattern with each component in its own file and using a component handler to handle all components. The codebase is also fully typed and uses static type checking. The application is also built to be as fast as possible and uses a LRU-cache to cache data and uses websockets to push data to the frontend application.`,
-        technologies: [
-          {
-            name: "TS",
-            type: "language",
-          },
-          {
-            name: "JS",
-            type: "language",
-          },
-          {
-            name: "Node.js",
-            type: "technology",
-          },
-          {
-            name: "Next.js",
-            type: "technology",
-          },
-          {
-            name: "React.js",
-            type: "technology",
-          },
-          {
-            name: "Electron.js",
-            type: "technology",
-          },
-          {
-            name: "Excel.js",
-            type: "technology",
-          },
-        ],
-      },
-      {
-        name: "Other Custom Internal Tools and Applications for employee Workflow Automation",
+        name: "Custom Internal Tools and Applications for Workflow Automation",
         description: ``,
         technologies: [
           {

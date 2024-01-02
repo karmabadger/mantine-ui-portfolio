@@ -259,6 +259,14 @@ const technologiesData: Technology[] = [
     name: "Taichi",
     icon: <TaichiIcon size={techIconSize} />,
   },
+  {
+    name: "Bazel",
+    icon: <TaichiIcon size={techIconSize} />,
+  },
+  {
+    name: "Buck2",
+    icon: <TaichiIcon size={techIconSize} />,
+  },
 ];
 
 export { languagesData, technologiesData };
