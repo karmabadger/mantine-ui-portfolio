@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import Layout from "@/components/layout";
 import { Box, Flex, Text } from "@mantine/core";
@@ -71,7 +72,7 @@ Beyond the world of technology, I&apos;m a curious explorer. I delve into histor
 Join me on this exciting journey of innovation, creativity, and endless possibilities.
             </Text>
             <br />
-            <a href="/experience">Explore my work and projects!</a>
+            <Link href="/experience">Explore my work and projects!</Link>
           </Box>
         </Flex>
       </Layout>
